@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nông sản Tây Nguyên</title>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+    <nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-12">
+
+            <a href="homePage.html" class="flex items-center gap-3">
+                <img
+                    src="../static/images/LOGO.png"
+                    alt="Logo NSTN"
+                    class="w-10 h-10 object-contain rounded-full"
+                >
+                <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight">Nông Sản Tây Nguyên</span>
+            </a>
+
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="homePage.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Trang chủ</a>
+                <a href="aboutUS.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Về chúng tôi</a>
+                <a href="product.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Sản phẩm</a>
+                <a href="contact.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Liên hệ</a>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <button onclick="toggleLanguage()" class="text-emerald-800 dark:text-emerald-400 font-bold tracking-tight font-headline hover:opacity-80 transition-all cursor-pointer">
+                VN / CN
+            </button>
+
+            <a href="contact.html" class="font-headline transition-all duration-300 px-6 py-3 rounded-xl inline-block text-center bg-emerald-500 text-white hover:bg-emerald-600 hover:scale-105 shadow-md">
+               NHẬN TƯ VẤN
+            </a>
+        </div>
+    </nav>
+</header>
+
+<script>
+    function toggleLanguage() {
+        // Lấy tên file hiện tại trên thanh địa chỉ
+        let currentUrl = window.location.pathname;
+        let filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+
+        // Mặc định nếu đang ở thư mục gốc (không có tên file)
+        if (!filename || filename === '') {
+            filename = 'homePage.html';
+        }
+
+        // Kiểm tra xem đang ở bản tiếng Trung hay tiếng Việt để chuyển đổi qua lại
+        if (filename.includes('_cn.html')) {
+            window.location.href = filename.replace('_cn.html', '.html');
+        } else {
+            window.location.href = filename.replace('.html', '_cn.html');
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="light" lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>联系我们 - 西原农产 (NSTN)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-low": "#f2f4f3",
+                "surface-container": "#eceeed",
+                "surface-dim": "#d8dad9",
+                "surface-bright": "#f8faf9",
+                "surface": "#f8faf9",
+                "primary": "#476648",
+                "on-primary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#032109",
+                "on-surface-variant": "#424841",
+                "on-secondary-container": "#765c00",
+                "on-primary-fixed-variant": "#2f4e32",
+                "on-background": "#191c1c",
+                "on-secondary-fixed": "#241a00",
+                "inverse-primary": "#add0ab",
+                "secondary": "#755b00",
+                "on-primary-container": "#264429",
+                "on-tertiary-container": "#304230",
+                "tertiary-container": "#99ae97",
+                "tertiary-fixed-dim": "#b7ccb5",
+                "secondary-fixed-dim": "#e8c25d",
+                "on-error-container": "#93000a",
+                "surface-container-highest": "#e1e3e2",
+                "primary-fixed": "#c8ecc6",
+                "on-error": "#ffffff",
+                "primary-container": "#8fb18e",
+                "primary-fixed-dim": "#add0ab",
+                "on-surface": "#191c1c",
+                "secondary-container": "#fdd66e",
+                "background": "#f8faf9",
+                "inverse-surface": "#2e3131",
+                "outline-variant": "#c2c8be",
+                "surface-container-lowest": "#ffffff",
+                "outline": "#737970",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed": "#0e1f10",
+                "tertiary-fixed": "#d3e8d0",
+                "secondary-fixed": "#ffdf90",
+                "inverse-on-surface": "#eff1f0",
+                "error": "#ba1a1a",
+                "surface-container-high": "#e6e9e8",
+                "on-secondary-fixed-variant": "#584400",
+                "surface-variant": "#e1e3e2",
+                "surface-tint": "#476648",
+                "on-tertiary-fixed-variant": "#394b39",
+                "tertiary": "#506350"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .map-frame { display: none; }
+        .map-frame.active { display: block; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+{% include "header_cn.html" %}
+
+<main class="pt-20">
+    <section class="max-w-screen-2xl mx-auto px-12 py-32 grid grid-cols-1 lg:grid-cols-12 gap-20">
+
+        <div class="lg:col-span-5 space-y-16">
+            <div>
+                <h2 class="text-3xl font-bold text-on-surface mb-12 tracking-tight">办公处与加工厂</h2>
+                <div class="space-y-10">
+                    <div class="flex gap-6 group">
+                        <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg group-hover:bg-primary-fixed transition-colors">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-secondary mb-1">总部</h3>
+                            <p class="text-lg font-medium">越南多乐省克容帕县 19/5 村 (Thôn 19/5, Krông Pắc, Đắk Lắk)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg group-hover:bg-primary-fixed transition-colors">
+                            <span class="material-symbols-outlined text-primary">corporate_fare</span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-secondary mb-1">1号包装厂 (主要出口)</h3>
+                            <p class="text-lg font-medium">越南多乐省克容帕县 Y-Jút 路 (Đường Y-Jút, Krông Pắc, Đắk Lắk)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg group-hover:bg-primary-fixed transition-colors">
+                            <span class="material-symbols-outlined text-primary">factory</span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-secondary mb-1">2号包装厂</h3>
+                            <p class="text-lg font-medium">越南多乐省邦美蜀市东侧绕道 (Đường tránh Phía Đông Buôn Ma Thuột)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-outline-variant/30">
+                <h2 class="text-3xl font-bold text-on-surface mb-12 tracking-tight">联系方式</h2>
+                <div class="space-y-8">
+                    <a class="flex items-center gap-6 group" href="tel:+84932444222">
+                        <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">call</span>
+                        <span class="text-xl font-medium">+84 0932 444 222</span>
+                    </a>
+                    <a class="flex items-center gap-6 group" href="mailto:congtytnhhtmdvnongsantaynguyen@gmail.com">
+                        <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">mail</span>
+                        <span class="text-xl font-medium break-all">congtytnhhtmdvnongsantaynguyen@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-surface-container-lowest p-12 lg:p-16 rounded-xl shadow-xl hover:shadow-2xl transition-all relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 blur-3xl rounded-full -mr-16 -mt-16"></div>
+            <h2 class="text-3xl font-bold text-on-surface mb-4 tracking-tight">提交需求</h2>
+            <p class="text-on-surface-variant mb-12 font-body">请填写以下信息，我们的业务专员将在24小时内与您联系。</p>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">姓名</label>
+                    <input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm" placeholder="您的称呼" type="text"/>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">企业邮箱</label>
+                    <input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm" placeholder="name@company.com" type="email"/>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">联系电话</label>
+                    <input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm" placeholder="手机或固定电话" type="tel"/>
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">咨询意向</label>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <label class="relative flex items-center group cursor-pointer">
+                            <input class="sr-only peer" name="interest" type="radio"/>
+                            <div class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm">榴莲出口报价</div>
+                        </label>
+                        <label class="relative flex items-center group cursor-pointer">
+                            <input class="sr-only peer" name="interest" type="radio"/>
+                            <div class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm">种植区代码咨询</div>
+                        </label>
+                        <label class="relative flex items-center group cursor-pointer">
+                            <input class="sr-only peer" name="interest" type="radio"/>
+                            <div class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm">人才招聘</div>
+                        </label>
+                        <label class="relative flex items-center group cursor-pointer">
+                            <input class="sr-only peer" name="interest" type="radio"/>
+                            <div class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm">其他</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">留言内容</label>
+                    <textarea class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm" placeholder="您想对我们说的话..." rows="4"></textarea>
+                </div>
+                <div class="md:col-span-2 pt-4">
+                    <button class="w-full bg-primary-container text-on-primary-container font-bold py-5 rounded-lg shadow-md hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="submit">
+                        立即发送请求
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="w-full bg-surface-container-low py-24">
+        <div class="max-w-screen-2xl mx-auto px-12">
+            <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4">包装与贸易基地位置</h2>
+                    <p class="text-on-surface-variant max-w-xl">我们的包装厂和办公室均位于核心产区，确保高效的出口物流流程。</p>
+                </div>
+                <div class="flex gap-4">
+                    <button id="btn-daklak" onclick="switchLocation('daklak')"
+                        class="px-6 py-3 font-bold rounded-lg transition-all bg-primary text-white shadow-md">
+                        多乐省 (Đắk Lắk)
+                    </button>
+                    <button id="btn-dongthap" onclick="switchLocation('dongthap')"
+                        class="px-6 py-3 font-bold rounded-lg transition-all bg-surface-container-lowest text-on-surface shadow-sm">
+                        同塔省 (Đồng Tháp)
+                    </button>
+                </div>
+            </div>
+
+            <div class="h-[600px] rounded-2xl overflow-hidden relative">
+                <iframe id="map-daklak" class="map-frame active w-full h-full" src="https://www.google.com/maps/embed?pb=..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe id="map-dongthap" class="map-frame w-full h-full" src="https://www.google.com/maps/embed?pb=..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                <div id="info-card" class="absolute bottom-10 left-10 p-8 bg-white shadow-2xl rounded-xl max-w-md transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-secondary">已准备好出口 (Ready for Export)</span>
+                    </div>
+                    <h4 id="card-title" class="text-xl font-bold mb-2">多乐省包装与冷藏厂</h4>
+                    <p id="card-address" class="text-sm text-on-surface-variant mb-6 font-body">
+                        越南多乐省克容帕县。月产能：5000吨。
+                    </p>
+                    <a id="card-direction" href="#" target="_blank" class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">
+                        查看路线指引
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-[#f8faf9] dark:bg-zinc-900 text-sm leading-relaxed">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-screen-2xl mx-auto">
+        <div class="md:col-span-1">
+            <span class="text-xl font-bold text-[#476648] mb-4 block">西原农产 (NSTN)</span>
+            <p class="text-zinc-500 dark:text-zinc-500 mb-8">遵循国际标准，通过可持续耕作与加工提升越南农产品价值。</p>
+            <div class="flex gap-4">
+                <span class="material-symbols-outlined text-zinc-400 hover:text-primary cursor-pointer transition-colors">public</span>
+                <span class="material-symbols-outlined text-zinc-400 hover:text-primary cursor-pointer transition-colors">description</span>
+                <span class="material-symbols-outlined text-zinc-400 hover:text-primary cursor-pointer transition-colors">share</span>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h4 class="font-bold text-[#476648] uppercase tracking-wider text-xs">快捷链接</h4>
+            <ul class="space-y-3">
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="product_cn.html">核心产品</a></li>
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="#">出口流程</a></li>
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="aboutUS_cn.html">关于我们</a></li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h4 class="font-bold text-[#476648] uppercase tracking-wider text-xs">合作伙伴支持</h4>
+            <ul class="space-y-3">
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="#">隐私条款</a></li>
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="#">服务协议</a></li>
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="#">出口许可证</a></li>
+                <li><a class="text-zinc-500 hover:text-[#755b00] hover:underline transition-all" href="#">企业资质</a></li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h4 class="font-bold text-[#476648] uppercase tracking-wider text-xs">行业资讯</h4>
+            <p class="text-zinc-500 dark:text-zinc-500 mb-4">订阅以获取最新季节与行情更新。</p>
+            <div class="flex">
+                <input class="bg-surface-container-high border-none rounded-l-lg py-2 px-4 w-full focus:ring-1 focus:ring-primary" placeholder="您的手机号码" type="text"/>
+                <button class="bg-primary text-white px-4 rounded-r-lg hover:opacity-90">提交</button>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-screen-2xl mx-auto px-12 py-8 border-t border-zinc-200 dark:border-zinc-800 text-center text-zinc-400">
+        Copyright 2026 © 西原农产品商贸服务有限责任公司。税务登记号：6001769504
+    </div>
+</footer>
+
+<script>
+    const locations = {
+        daklak: {
+            title: "多乐省包装与冷藏厂",
+            address: "越南多乐省克容帕县。月产能：5000吨。",
+            direction: "#"
+        },
+        dongthap: {
+            title: "同塔省包装与贸易处",
+            address: "越南同塔省。月产能：2000吨。",
+            direction: "#"
+        }
+    };
+
+    function switchLocation(loc) {
+        document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
+        document.getElementById('map-' + loc).classList.add('active');
+        document.getElementById('card-title').textContent = locations[loc].title;
+        document.getElementById('card-address').textContent = locations[loc].address;
+        document.getElementById('card-direction').href = locations[loc].direction;
+        document.getElementById('btn-daklak').className = 'px-6 py-3 font-bold rounded-lg transition-all bg-surface-container-lowest text-on-surface shadow-sm';
+        document.getElementById('btn-dongthap').className = 'px-6 py-3 font-bold rounded-lg transition-all bg-surface-container-lowest text-on-surface shadow-sm';
+        document.getElementById('btn-' + loc).className = 'px-6 py-3 font-bold rounded-lg transition-all bg-primary text-white shadow-md';
+    }
+</script>
+</body>
+</html>

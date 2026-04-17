@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五大代表性榴莲品种概况报告 - 西原农产</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #16a34a, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased pb-20">
+
+    <header class="bg-white shadow-sm py-12 mb-10 border-b-4 border-green-600">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-slate-800 tracking-tight">
+                行业分析报告
+                <br>
+                <span class="block mt-4 py-2 leading-relaxed text-gradient">五大代表性榴莲品种概况</span>
+            </h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-6">总结目前商业价值最高的五种榴莲的生物学特性、口感品质及市场定位，旨在服务于出口与商业扩张战略。</p>
+            <div class="inline-flex items-center space-x-4 text-sm font-semibold text-slate-600 bg-slate-100 py-2 px-4 rounded-full">
+                <span>📅 编制日期: 2026年4月16日</span>
+                <span>👤 编制人: 西原农产团队</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-16">
+
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">📍 市场细分分类</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">基于经济价值与生理构造，五大品种被划分为三大战略类别，以满足不同客户群体与物流需求。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8 border-t-4 border-green-500">
+                    <div class="text-4xl mb-4">🚢</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">出口主力与大众市场</h3>
+                    <p class="text-sm text-slate-600 mb-6">产量大、易于规模化种植、保鲜期长，符合严格的远程物流标准。</p>
+                    <div class="space-y-4">
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-bold text-green-800">金枕头 (Monthong)</h4>
+                            <p class="text-xs text-green-700 mt-1">肉色淡黄、清甜，"正贸出口"的绝对王者。</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-bold text-green-800">干尧 (Ri6)</h4>
+                            <p class="text-xs text-green-700 mt-1">果肉深黄、糯口。越南国民品种，产量稳定。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 border-t-4 border-orange-500">
+                    <div class="text-4xl mb-4">👑</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">顶级与超高端市场</h3>
+                    <p class="text-sm text-slate-600 mb-6">利润空间极高，针对追求独一无二体验的高收入客群。</p>
+                    <div class="space-y-4">
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-bold text-orange-800">猫山王 (Musang King)</h4>
+                            <p class="text-xs text-orange-700 mt-1">底部五角星，奶油质地，苦后回甘极其出色。</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-bold text-orange-800">黑刺 (Black Thorn)</h4>
+                            <p class="text-xs text-orange-700 mt-1">橙红果肉，顶级昂贵。带有独特的发酵酒香。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 border-t-4 border-yellow-500">
+                    <div class="text-4xl mb-4">💎</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">地方特产市场</h3>
+                    <p class="text-sm text-slate-600 mb-6">服务于小众市场，受老饕推崇，专注于极致的果肉口感。</p>
+                    <div class="space-y-4">
+                        <div class="bg-yellow-50 rounded-lg p-4">
+                            <h4 class="font-bold text-yellow-800">六友 (6 Huu)</h4>
+                            <p class="text-xs text-yellow-700 mt-1">果型纤小，焦核率极高，果肉金黄，甜度极高。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-8 md:p-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">📊 味道风味结构分析</h2>
+                    <p class="text-slate-600 mb-6">雷达图展示了五种榴莲在定性指标上的对比。顶级品种（猫山王、黑刺）在奶香味、质地细腻度及复杂风味上占据显著优势。而金枕头则以均衡轻盈的口感赢得大众青睐。</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-sm"><span class="w-3 h-3 rounded-full bg-[#1e293b] mr-3"></span> <strong>金枕头:</strong> 清甜爽口，奶香适中。</li>
+                        <li class="flex items-center text-sm"><span class="w-3 h-3 rounded-full bg-[#16a34a] mr-3"></span> <strong>干尧 (Ri6):</strong> 甜度高，香气浓郁。</li>
+                        <li class="flex items-center text-sm"><span class="w-3 h-3 rounded-full bg-[#facc15] mr-3"></span> <strong>猫山王:</strong> 质地如黄油，完美苦后回甘。</li>
+                        <li class="flex items-center text-sm"><span class="w-3 h-3 rounded-full bg-[#f97316] mr-3"></span> <strong>六友:</strong> 极致甜美，脂肪感极强。</li>
+                        <li class="flex items-center text-sm"><span class="w-3 h-3 rounded-full bg-[#dc2626] mr-3"></span> <strong>黑刺:</strong> 零纤维，极细腻，自带酒香。</li>
+                    </ul>
+                </div>
+                <div class="w-full">
+                    <div class="chart-container">
+                        <canvas id="flavorRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-8 md:p-12 bg-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 w-full">
+                    <div class="chart-container">
+                        <canvas id="marketBubbleChart"></canvas>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">📈 商业定位与物流分析</h2>
+                    <p class="text-slate-600 mb-6">该图表展示了<strong>运输保鲜度</strong>（X轴）与<strong>商业价值/溢价</strong>（Y轴）之间的相关性。气泡大小代表当前<strong>市场产量份额</strong>。</p>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-2">战略要点：</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-sm text-slate-600">
+                            <li><strong>金枕头与干尧</strong>位于右下方：最适合长途物流，产量巨大，运输风险低。</li>
+                            <li><strong>黑刺与猫山王</strong>位于左上方：具有极高的商业溢价，但需要完善的冷链与严格的控温，物流敏感度高。</li>
+                            <li><strong>六友</strong>占据特色市场：溢价高但产量稀少，适合精品内销或直供。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-800 text-white rounded-3xl p-10 text-center shadow-2xl">
+            <h2 class="text-3xl font-bold mb-8">💡 结论与投资建议</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-700/50 p-6 rounded-2xl">
+                    <div class="text-3xl mb-3">🌏</div>
+                    <h4 class="font-bold text-green-400 mb-2">大众出口战略</h4>
+                    <p class="text-sm text-slate-300">优先发展<strong>金枕头</strong>和<strong>干尧</strong>，确保产量规模与长途运输安全性。</p>
+                </div>
+                <div class="bg-slate-700/50 p-6 rounded-2xl">
+                    <div class="text-3xl mb-3">🏆</div>
+                    <h4 class="font-bold text-orange-400 mb-2">高端利润优化</h4>
+                    <p class="text-sm text-slate-300">集中资源投入<strong>猫山王</strong>与<strong>黑刺</strong>，打造企业高端品牌形象。</p>
+                </div>
+                <div class="bg-slate-700/50 p-6 rounded-2xl">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h4 class="font-bold text-yellow-400 mb-2">特色产地挖掘</h4>
+                    <p class="text-sm text-slate-300">挖掘<strong>六友</strong>等精品，满足追求极致品质的高端订制市场。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const rawRadarLabels = ["极致甜度", "脂肪感/奶香", "独特性香气", "细腻度/糯口度", "焦核率"];
+
+        const radarCtx = document.getElementById('flavorRadarChart').getContext('2d');
+        new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: rawRadarLabels,
+                datasets: [
+                    { label: '金枕头', data: [6, 6, 5, 7, 9], backgroundColor: 'rgba(30, 41, 59, 0.1)', borderColor: '#1e293b', borderWidth: 2 },
+                    { label: '干尧', data: [8, 8, 9, 8, 7], backgroundColor: 'rgba(22, 163, 74, 0.1)', borderColor: '#16a34a', borderWidth: 2 },
+                    { label: '猫山王', data: [9, 10, 8, 10, 8], backgroundColor: 'rgba(250, 204, 21, 0.1)', borderColor: '#facc15', borderWidth: 2 },
+                    { label: '六友', data: [9, 9, 8, 8, 10], backgroundColor: 'rgba(249, 115, 22, 0.1)', borderColor: '#f97316', borderWidth: 2 },
+                    { label: '黑刺', data: [8, 9, 9, 10, 8], backgroundColor: 'rgba(220, 38, 38, 0.1)', borderColor: '#dc2626', borderWidth: 2 }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { font: { family: 'Inter', size: 12, weight: 'bold' }, color: '#475569' },
+                        ticks: { display: false, min: 0, max: 10 }
+                    }
+                },
+                plugins: { legend: { position: 'bottom', labels: { padding: 15, font: { family: 'Inter', size: 11 } } } }
+            }
+        });
+
+        const bubbleCtx = document.getElementById('marketBubbleChart').getContext('2d');
+        new Chart(bubbleCtx, {
+            type: 'bubble',
+            data: {
+                datasets: [
+                    { label: '金枕头', data: [{ x: 9.5, y: 5.0, r: 35 }], backgroundColor: 'rgba(30, 41, 59, 0.7)', borderColor: '#1e293b' },
+                    { label: '干尧', data: [{ x: 8.0, y: 6.5, r: 28 }], backgroundColor: 'rgba(22, 163, 74, 0.7)', borderColor: '#16a34a' },
+                    { label: '猫山王', data: [{ x: 5.5, y: 9.0, r: 18 }], backgroundColor: 'rgba(250, 204, 21, 0.7)', borderColor: '#eab308' },
+                    { label: '黑刺', data: [{ x: 4.0, y: 10.0, r: 12 }], backgroundColor: 'rgba(220, 38, 38, 0.7)', borderColor: '#dc2626' },
+                    { label: '六友', data: [{ x: 3.5, y: 7.5, r: 10 }], backgroundColor: 'rgba(249, 115, 22, 0.7)', borderColor: '#f97316' }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { title: { display: true, text: '物流保鲜与运输优化 (1-10)', font: { family: 'Inter', weight: 'bold' } }, min: 2, max: 10 },
+                    y: { title: { display: true, text: '商业价值与市场定价 (1-10)', font: { family: 'Inter', weight: 'bold' } }, min: 4, max: 11 }
+                },
+                plugins: { legend: { position: 'bottom', labels: { padding: 15, font: { family: 'Inter', size: 11 } } } }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sản Phẩm - NSTN</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e1e3e2",
+                    "secondary": "#755b00",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#584400",
+                    "on-tertiary-fixed": "#0e1f10",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#2f4e32",
+                    "primary-fixed-dim": "#add0ab",
+                    "outline": "#737970",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#b7ccb5",
+                    "tertiary-fixed": "#d3e8d0",
+                    "tertiary": "#506350",
+                    "secondary-fixed": "#ffdf90",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#2e3131",
+                    "surface-container-high": "#e6e9e8",
+                    "inverse-primary": "#add0ab",
+                    "on-surface": "#191c1c",
+                    "secondary-fixed-dim": "#e8c25d",
+                    "on-tertiary-fixed-variant": "#394b39",
+                    "surface-bright": "#f8faf9",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f2f4f3",
+                    "on-error-container": "#93000a",
+                    "on-background": "#191c1c",
+                    "on-surface-variant": "#424841",
+                    "surface-variant": "#e1e3e2",
+                    "surface-container": "#eceeed",
+                    "on-secondary-container": "#765c00",
+                    "on-tertiary-container": "#304230",
+                    "primary-fixed": "#c8ecc6",
+                    "primary": "#476648",
+                    "on-primary-container": "#264429",
+                    "background": "#f8faf9",
+                    "surface-tint": "#476648",
+                    "tertiary-container": "#99ae97",
+                    "surface-dim": "#d8dad9",
+                    "on-primary-fixed": "#032109",
+                    "secondary-container": "#fdd66e",
+                    "on-secondary-fixed": "#241a00",
+                    "surface": "#f8faf9",
+                    "primary-container": "#8fb18e",
+                    "inverse-on-surface": "#eff1f0",
+                    "outline-variant": "#c2c8be"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .tonal-shift { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Hero Section -->
+{% include "header.html" %}
+<!-- Product Grid Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-extrabold text-primary mb-4 tracking-tight">Danh Mục Sầu Riêng Thượng Hạng</h2>
+<p class="text-on-surface-variant max-w-2xl font-light">Độ chín được kiểm soát nghiêm ngặt theo yêu cầu vận chuyển đường xa.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Monthong -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:-translate-y-2 shadow-lg hover:shadow-xl">
+  <div class="relative aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container">
+    <div class="absolute top-4 left-4 z-10 flex gap-2">
+      <span class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Core Product</span>
+    </div>
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+         data-alt="Fresh Monthong durian segments with deep golden yellow flesh, studio lighting, soft shadows on a minimalist background"
+         src="../static/images/THAI 1.png"/>
+  </div>
+  <div class="border-t-2 border-transparent group-hover:border-secondary pt-6 transition-all">
+    <h3 class="text-2xl font-bold text-on-surface mb-3">Sầu riêng Monthong</h3>
+    <div class="space-y-2 mb-6">
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Độ ngọt (Brix)</span>
+        <span class="font-bold text-primary">32 - 38°</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Màu cơm</span>
+        <span class="font-bold text-primary">Vàng nhạt</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Hương vị</span>
+        <span class="font-bold text-primary">Ngọt thanh, béo vừa</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Trọng lượng</span>
+        <span class="font-bold text-primary">2.5kg - 4.5kg</span>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <span class="text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded">High Quality</span>
+    </div>
+  </div>
+</div>
+<!-- Ri6 -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:-translate-y-2 shadow-lg hover:shadow-xl">
+  <div class="relative aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container">
+    <div class="absolute top-4 left-4 z-10 flex gap-2">
+      <span class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Core Product</span>
+    </div>
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+         data-alt="Fresh Ri6 durian segments with deep golden yellow flesh, studio lighting, soft shadows on a minimalist background"
+         src="../static/images/RI6 2.jpeg"/>
+  </div>
+  <div class="border-t-2 border-transparent group-hover:border-secondary pt-6 transition-all">
+    <h3 class="text-2xl font-bold text-on-surface mb-3">Sầu riêng Ri6</h3>
+    <div class="space-y-2 mb-6">
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Độ ngọt (Brix)</span>
+        <span class="font-bold text-primary">34 - 40°</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Màu cơm</span>
+        <span class="font-bold text-primary">Vàng đậm, béo ngậy</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Hương vị</span>
+        <span class="font-bold text-primary">Ngọt đậm, béo ngậy</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Trọng lượng</span>
+        <span class="font-bold text-primary">2.0kg - 4.0kg</span>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <span class="text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded">High Quality</span>
+    </div>
+  </div>
+</div>
+<!-- Musang King -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:-translate-y-2 shadow-lg hover:shadow-xl">
+  <div class="relative aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container">
+    <div class="absolute top-4 left-4 z-10 flex gap-2">
+      <span class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Premium</span>
+    </div>
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+         data-alt="Exotic Musang King durian fruit details, showcasing the unique heart shape and yellow-gold flesh pieces"
+         src="../static/images/MU.png"/>
+  </div>
+  <div class="border-t-2 border-transparent group-hover:border-secondary pt-6 transition-all">
+    <h3 class="text-2xl font-bold text-on-surface mb-3">Musang King</h3>
+    <div class="space-y-2 mb-6">
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Độ ngọt (Brix)</span>
+        <span class="font-bold text-primary">38 - 42°</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Màu cơm</span>
+        <span class="font-bold text-primary">Vàng nghệ, mịn</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Hương vị</span>
+        <span class="font-bold text-primary">Ngọt đậm hậu có vị đắng nhẹ</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Trọng lượng</span>
+        <span class="font-bold text-primary">1.5kg - 3.5kg</span>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <span class="text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded">High Quality</span>
+    </div>
+  </div>
+</div>
+<!-- 6 Hữu -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:-translate-y-2 shadow-lg hover:shadow-xl">
+  <div class="relative aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container">
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+         data-alt="Traditional 6 Huu durian variety from Vietnam highlands, rustic yet high-end studio presentation"
+         src="../static/images/6HUU.png"/>
+  </div>
+  <div class="border-t-2 border-transparent group-hover:border-secondary pt-6 transition-all">
+    <h3 class="text-2xl font-bold text-on-surface mb-3">Sầu riêng 6 Hữu</h3>
+    <div class="space-y-2 mb-6">
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Độ ngọt (Brix)</span>
+        <span class="font-bold text-primary">40+°</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Màu cơm</span>
+        <span class="font-bold text-primary">Vàng nhạt, mịn</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Hương vị</span>
+        <span class="font-bold text-primary">Ngọt, béo </span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Trọng lượng</span>
+        <span class="font-bold text-primary">1.5kg - 4.8kg</span>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <span class="text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded">High Quality</span>
+    </div>
+  </div>
+</div>
+<!-- Black Thorn-->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:-translate-y-2 shadow-lg hover:shadow-xl">
+  <div class="relative aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container">
+    <div class="absolute top-4 left-4 z-10 flex gap-2">
+      <span class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Limited</span>
+    </div>
+    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+         data-alt="BlackThorn durian variety, highly detailed spikes, premium and exclusive look for luxury fruit export"
+         src="../static/images/THORN.png"/>
+  </div>
+  <div class="border-t-2 border-transparent group-hover:border-secondary pt-6 transition-all">
+    <h3 class="text-2xl font-bold text-on-surface mb-3">BlackThorn</h3>
+    <div class="space-y-2 mb-6">
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Độ ngọt (Brix)</span>
+        <span class="font-bold text-primary">40+°</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Màu cơm</span>
+        <span class="font-bold text-primary">Vàng cam, mịn</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Hương vị</span>
+        <span class="font-bold text-primary">Ngọt thanh, cực dẻo</span>
+      </div>
+      <div class="flex justify-between text-sm">
+        <span class="text-on-surface-variant">Trọng lượng</span>
+        <span class="font-bold text-primary">2.0kg - 4.3kg</span>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <span class="text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded">High Quality+</span>
+    </div>
+  </div>
+</div>
+<!-- Inquiry Bento Card -->
+<div class="bg-primary/5 rounded-xl p-8 flex flex-col justify-center items-center text-center border-2 border-dashed border-primary/20">
+  <span class="material-symbols-outlined text-5xl text-primary mb-4">search_insights</span>
+  <h3 class="text-xl font-bold text-primary mb-2">Tìm kiếm giống khác?</h3>
+  <p class="text-on-surface-variant text-sm mb-6">Chúng tôi có mạng lưới liên kết hơn 2,000 hecta vùng trồng tại Tây Nguyên.</p>
+  <a 
+    href="contact.html" 
+    class="text-primary font-bold underline underline-offset-8 hover:text-secondary transition-colors"
+  >
+    Yêu cầu tư vấn
+  </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Specification & Packing Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-extrabold text-primary mb-12 tracking-tight text-center">Thông Số Kỹ Thuật &amp; Đóng Gói</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div class="space-y-8">
+<div class="bg-white p-10 rounded-2xl shadow-sm border-l-4 border-secondary">
+<h3 class="text-xl font-bold text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined">inventory_2</span>
+                            Quy Cách Đóng Gói
+                        </h3>
+<table class="w-full text-sm text-left">
+<thead class="text-on-surface-variant uppercase text-[10px] tracking-widest border-b border-outline-variant">
+<tr>
+<th class="pb-4">Hạng Mục</th>
+<th class="pb-4">Chi Tiết</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="border-b border-stone-100">
+<td class="py-4 font-medium">Trái tươi (Thùng)</td>
+<td class="py-4">10kg / Thùng Carton (3-4 trái)</td>
+</tr>
+<tr class="border-b border-stone-100">
+<td class="py-4 font-medium">Vận chuyển</td>
+<td class="py-4">Container lạnh (20-22 tấn)</td>
+</tr>
+<tr>
+<td class="py-4 font-medium">Nhiệt độ bảo quản</td>
+<td class="py-4">13°C - 15°C </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-primary p-8 rounded-2xl text-on-primary">
+<span class="material-symbols-outlined text-4xl mb-4">verified</span>
+<h4 class="text-lg font-bold mb-2">Truy xuất nguồn gốc</h4>
+<p class="text-sm opacity-80 leading-relaxed">Mỗi thùng hàng đều tích hợp mã QR truy xuất trực tiếp đến từng vườn liên kết.</p>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-2xl">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary">ac_unit</span>
+<h4 class="text-lg font-bold mb-2">Chuỗi cung ứng </h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Quy trình xử lý nhiệt và đóng gói khép kín trong 24h sau thu hoạch.</p>
+</div>
+<div class="col-span-2 bg-secondary p-8 rounded-2xl text-on-secondary flex items-center justify-between">
+<div class="max-w-xs">
+<h4 class="text-xl font-bold mb-2">Thời gian vận chuyển</h4>
+<p class="text-sm opacity-90">Cam kết chất lượng tốt nhất trong 7-10 ngày vận chuyển.</p>
+</div>
+<span class="material-symbols-outlined text-6xl opacity-30">sailing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-24 bg-white relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+    <h2 class="text-4xl font-extrabold text-primary mb-6">Sẵn Sàng Hợp Tác Xuất Khẩu</h2>
+    <p class="text-on-surface-variant text-lg mb-12 font-light">Chúng tôi cung cấp giải pháp nguồn cung bền vững với số lượng lớn và chính sách giá sỉ ưu đãi cho các đối tác quốc tế.</p>
+
+    <div class="flex flex-row items-center justify-center gap-6 flex-wrap">
+      <a
+        href="https://zalo.me/g/uzvzes474?joinSrc=9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-primary text-on-primary px-10 py-5 rounded-lg font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-lg shadow-primary/20"
+      >
+        <span class="material-symbols-outlined">request_quote</span>
+        Tham gia nhóm báo giá
+      </a>
+
+      <a
+        href="brochure.html"
+        class="border-2 border-primary text-primary px-10 py-5 rounded-lg font-bold text-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-3"
+      >
+        <span class="material-symbols-outlined">description</span>
+        Tải Brochure sản phẩm
+      </a>
+    </div>
+  </div>
+<!-- Decorative subtle element -->
+<div class="absolute top-1/2 left-0 -translate-y-1/2 opacity-5 pointer-events-none">
+<span class="text-[300px] font-black tracking-tighter text-primary">NSTN</span>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-sm">
+<div class="text-xl font-bold text-[#476648] dark:text-[#8FB18E] mb-6">
+                    NÔNG SẢN TÂY NGUYÊN
+                </div>
+<p class="font-inter text-sm antialiased text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
+                    Nhà xuất khẩu nông sản cao cấp từ Tây Nguyên, mang giá trị Việt vươn tầm thế giới qua sự tận tâm và minh bạch.
+                </p>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">public</span>
+</span>
+<span class="w-8 h-8 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">mail</span>
+</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h4 class="text-primary dark:text-[#8FB18E] font-bold text-sm uppercase tracking-widest">Hỗ trợ đối tác</h4>
+<ul class="space-y-3 font-inter text-sm text-stone-600 dark:text-stone-400">
+<li><a class="hover:text-[#755b00] transition-colors underline-offset-4 hover:underline" href="#">Điều khoản dịch vụ</a></li>
+<li><a class="hover:text-[#755b00] transition-colors underline-offset-4 hover:underline" href="#">Chính sách bảo mật</a></li>
+<li><a class="hover:text-[#755b00] transition-colors underline-offset-4 hover:underline" href="#">Liên hệ xuất khẩu</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-primary dark:text-[#8FB18E] font-bold text-sm uppercase tracking-widest">Chứng nhận</h4>
+<ul class="space-y-3 font-inter text-sm text-stone-600 dark:text-stone-400">
+<li><a class="hover:text-[#755b00] transition-colors underline-offset-4 hover:underline" href="#">Chứng nhận GlobalGAP</a></li>
+<li><a class="hover:text-[#755b00] transition-colors underline-offset-4 hover:underline" href="#">Kiểm định chất lượng</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-stone-200 dark:border-stone-900">
+<p class="font-inter text-xs antialiased text-stone-500 dark:text-stone-500 text-center md:text-left">
+                Copyright 2026 © CÔNG TY TNHH TM&DV NÔNG SẢN TÂY NGUYÊN. MST: 6001769504
+            </p>
+</div>
+</footer>
+</body></html>

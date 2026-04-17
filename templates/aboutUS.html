@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Về chúng tôi - NSTN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-container": "#fdd66e",
+                        "primary-fixed-dim": "#add0ab",
+                        "tertiary": "#506350",
+                        "surface-dim": "#d8dad9",
+                        "outline-variant": "#c2c8be",
+                        "on-error-container": "#93000a",
+                        "background": "#f8faf9",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#99ae97",
+                        "surface-container-highest": "#e1e3e2",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424841",
+                        "primary-container": "#8fb18e",
+                        "primary": "#476648",
+                        "surface-container": "#eceeed",
+                        "surface-bright": "#f8faf9",
+                        "inverse-primary": "#add0ab",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-tertiary-fixed-variant": "#394b39",
+                        "surface": "#f8faf9",
+                        "on-surface": "#191c1c",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#b7ccb5",
+                        "secondary-fixed": "#ffdf90",
+                        "secondary-fixed-dim": "#e8c25d",
+                        "on-background": "#191c1c",
+                        "surface-container-high": "#e6e9e8",
+                        "on-primary-fixed": "#032109",
+                        "inverse-surface": "#2e3131",
+                        "inverse-on-surface": "#eff1f0",
+                        "tertiary-fixed": "#d3e8d0",
+                        "outline": "#737970",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#2f4e32",
+                        "surface-variant": "#e1e3e2",
+                        "secondary": "#755b00",
+                        "surface-container-low": "#f2f4f3",
+                        "primary-fixed": "#c8ecc6",
+                        "on-secondary-container": "#765c00",
+                        "on-primary-container": "#264429",
+                        "on-tertiary-fixed": "#0e1f10",
+                        "surface-tint": "#476648",
+                        "on-tertiary-container": "#304230"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 8px 32px rgba(71, 102, 72, 0.04);
+        }
+        .text-glow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+{% include "header.html" %}
+<main class="pt-20">
+<section class="relative h-[870px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover brightness-[0.4]"
+             data-alt="NSTN"
+             src="../static/images/BG.jpg"/>
+    </div>
+    <div class="relative z-10 max-w-5xl px-8 text-center">
+        <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-normal mb-12">
+    Câu chuyện của chúng tôi — <br/>
+    <span class="text-primary-container">Hành trình nâng tầm nông&nbsp;sản&nbsp;Việt</span>
+</h1>
+
+        <div class="max-w-4xl mx-auto">
+            <p class="text-white/90 text-xl md:text-2xl font-light italic leading-relaxed mb-8">
+                "Tại Nông Sản Tây Nguyên, chúng tôi tin rằng chất lượng nguyên bản và niềm tin của đối tác là nền tảng tối thượng. Hơn cả một doanh nghiệp thương mại, chúng tôi đang từng ngày hiện thực hóa sứ mệnh đưa những sản vật tươi ngon nhất của đại ngàn vươn xa, chung tay định vị lại đẳng cấp của trái cây Việt Nam trên thị trường quốc tế."
+            </p>
+
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-[1px] bg-primary-container mb-4 opacity-60"></div>
+                <p class="text-white font-bold text-xl tracking-tight">Lê Văn Danh</p>
+                <p class="text-primary-container text-xs uppercase tracking-[0.3em] font-medium opacity-80 mt-1">Tổng Giám Đốc</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Core Values Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'wght' 200;">visibility</span>
+<h3 class="font-headline text-2xl font-bold text-primary">Tầm nhìn</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Trở thành thương hiệu cung ứng nông sản cao cấp hàng đầu khu vực, định danh giá trị nông sản Việt trên bản đồ giao thương quốc tế.</p>
+</div>
+<div class="space-y-6">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'wght' 200;">flag</span>
+<h3 class="font-headline text-2xl font-bold text-primary">Sứ mệnh</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Bảo tồn tinh hoa, tối ưu chuỗi giá trị và đảm bảo lợi ích hài hòa giữa người nông dân và đối tác toàn cầu.</p>
+</div>
+<div class="space-y-6">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'wght' 200;">verified</span>
+<h3 class="font-headline text-2xl font-bold text-primary">Chất lượng</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Kiểm soát khắt khe từ vùng trồng đến khâu đóng gói, đảm bảo mọi sản phẩm đều đạt tiêu chuẩn xuất khẩu quốc tế cao nhất.</p>
+</div>
+</div>
+</section>
+<!-- Material Zone Section -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-6">Vùng nguyên liệu tinh tuyển</h2>
+<p class="text-on-surface-variant font-light">Chúng tôi sở hữu và liên kết trực tiếp với các nhà vườn đạt chuẩn tại những tọa độ vàng của các khu vực trên toàn quốc đặc biệt là vùng Tây Nguyên.</p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<span class="block font-headline text-5xl font-black text-secondary">500+ha</span>
+<span class="text-sm font-medium uppercase tracking-widest text-outline">Vùng trồng đạt chuẩn</span>
+</div>
+<div class="text-center">
+<span class="block font-headline text-5xl font-black text-secondary">15+</span>
+<span class="text-sm font-medium uppercase tracking-widest text-outline">Kinh nghiệm</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Hub Đắk Lắk -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+<div class="aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+     data-alt="DAKLAK"
+     src="../static/images/VUON%201.png"/>
+</div>
+<div class="p-8">
+<h4 class="font-headline text-xl font-bold text-primary mb-2">Đắk Lắk</h4>
+<p class="text-sm text-on-surface-variant mb-4">Thủ phủ Sầu riêng &amp; Cà phê với thổ nhưỡng đất đỏ Bazan đặc thù.</p>
+<span class="text-secondary font-bold text-sm flex items-center gap-2">Tìm hiểu thêm <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Hub Lâm Đồng -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+<div class="aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+     data-alt="ANOTHER"
+     src="../static/images/HOA1.jpg"/>
+</div>
+<div class="p-8">
+<h4 class="font-headline text-xl font-bold text-primary mb-2">Các Tỉnh thành khác</h4>
+<p class="text-sm text-on-surface-variant mb-4">Vùng nguyên liệu dồi dào đảm bảo duy trì sản lượng quanh năm.</p>
+<span class="text-secondary font-bold text-sm flex items-center gap-2">Tìm hiểu thêm <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section class="py-24 bg-white border-y border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<h3 class="text-sm font-bold uppercase tracking-[0.3em] text-outline mb-12">Hệ thống chứng nhận quốc tế</h3>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center gap-2">
+<div class="w-24 h-12 bg-surface-container flex items-center justify-center rounded font-bold text-xs">GLOBAL GAP/VIET GAP</div>
+<span class="text-[10px] text-outline">Nông nghiệp bền vững</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-24 h-12 bg-surface-container flex items-center justify-center rounded font-bold text-xs text-primary">ISO 22000</div>
+<span class="text-[10px] text-outline">An toàn thực phẩm</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-24 h-12 bg-surface-container flex items-center justify-center rounded font-bold text-xs">HACCP</div>
+<span class="text-[10px] text-outline">Kiểm soát rủi ro</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8">
+<div class="max-w-4xl mx-auto text-center bg-surface-container p-16 rounded-2xl">
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-primary mb-8">Sẵn sàng đưa nông sản cao cấp đến thị trường thế giới</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:scale-105 editorial-shadow">
+                        Nhận báo giá xuất khẩu
+                    </button>
+<button class="bg-white text-primary border border-primary/20 px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:bg-primary/5">
+                        Tham quan vùng nguyên liệu
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950">
+<div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-manrope font-bold text-emerald-900 text-xl mb-6">Nông Sản Tây Nguyên</h3>
+<p class="text-stone-500 text-sm leading-relaxed mb-6">Nâng tầm giá trị nông sản Việt thông qua quy trình canh tác và chế biến bền vững theo tiêu chuẩn quốc tế</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">language</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-emerald-900">Liên kết nhanh</h4>
+<ul class="space-y-4">
+  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="aboutUS.html">Về chúng tôi</a></li>
+  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="product.html">Dòng sản phẩm</a></li>
+  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="#">Quy trình sản xuất</a></li>
+  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="#">Tin tức thị trường</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-emerald-900">Hỗ trợ B2B</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Legal Information</a></li>
+<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Contact Details</a></li>
+<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Quản lý đối tác</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-emerald-900">Văn phòng</h4>
+<p class="text-stone-500 text-sm leading-relaxed mb-4">
+<span class="font-bold">Trụ sở:</span> Xã Krông Pắc, Tỉnh Đắk Lắk, Việt Nam.
+                </p>
+<p class="text-stone-500 text-sm leading-relaxed">
+<span class="font-bold">Hotline:</span> +84 0932 444 222<br/>
+<span class="font-bold">Email:</span> congtytnhhtmdvnongsantaynguyen@gmail.com
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200">
+<p class="text-stone-500 text-xs text-center font-inter">
+                Copyright 2026 © CÔNG TY TNHH TM&DV NÔNG SẢN TÂY NGUYÊN. MST: 6001769504.
+            </p>
+
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>西原农产 - 越南高端榴莲供应链</title>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+    <nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-12">
+
+            <a href="homePage_cn.html" class="flex items-center gap-3">
+                <img
+                    src="../static/images/LOGO.png"
+                    alt="Logo NSTN"
+                    class="w-10 h-10 object-contain rounded-full"
+                >
+                <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight">西原农产</span>
+            </a>
+
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="homePage_cn.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">首页</a>
+                <a href="aboutUS_cn.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">关于我们</a>
+                <a href="product_cn.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">产品中心</a>
+                <a href="contact_cn.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">联系我们</a>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <button onclick="toggleLanguage()" class="text-emerald-800 dark:text-emerald-400 font-bold tracking-tight font-headline hover:opacity-80 transition-all cursor-pointer">
+                VN / CN
+            </button>
+
+            <a href="contact_cn.html" class="font-headline transition-all duration-300 px-6 py-3 rounded-xl inline-block text-center bg-emerald-500 text-white hover:bg-emerald-600 hover:scale-105 shadow-md">
+               业务洽谈
+            </a>
+        </div>
+    </nav>
+</header>
+
+<script>
+    function toggleLanguage() {
+        // 获取当前 URL (Lấy tên file hiện tại)
+        let currentUrl = window.location.pathname;
+        let filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+
+        // 默认首页 (Mặc định nếu trống)
+        if (!filename || filename === '') {
+            filename = 'homePage_cn.html';
+        }
+
+        // 语言切换逻辑 (Chuyển đổi qua lại giữa file .html và _cn.html)
+        if (filename.includes('_cn.html')) {
+            window.location.href = filename.replace('_cn.html', '.html');
+        } else {
+            window.location.href = filename.replace('.html', '_cn.html');
+        }
+    }
+</script>
+</body>
+</html>

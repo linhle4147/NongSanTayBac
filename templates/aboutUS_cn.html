@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="light" lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>关于我们 - NSTN</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-container": "#fdd66e",
+                        "primary-fixed-dim": "#add0ab",
+                        "tertiary": "#506350",
+                        "surface-dim": "#d8dad9",
+                        "outline-variant": "#c2c8be",
+                        "on-error-container": "#93000a",
+                        "background": "#f8faf9",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#99ae97",
+                        "surface-container-highest": "#e1e3e2",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424841",
+                        "primary-container": "#8fb18e",
+                        "primary": "#476648",
+                        "surface-container": "#eceeed",
+                        "surface-bright": "#f8faf9",
+                        "inverse-primary": "#add0ab",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-tertiary-fixed-variant": "#394b39",
+                        "surface": "#f8faf9",
+                        "on-surface": "#191c1c",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#b7ccb5",
+                        "secondary-fixed": "#ffdf90",
+                        "secondary-fixed-dim": "#e8c25d",
+                        "on-background": "#191c1c",
+                        "surface-container-high": "#e6e9e8",
+                        "on-primary-fixed": "#032109",
+                        "inverse-surface": "#2e3131",
+                        "inverse-on-surface": "#eff1f0",
+                        "tertiary-fixed": "#d3e8d0",
+                        "outline": "#737970",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#2f4e32",
+                        "surface-variant": "#e1e3e2",
+                        "secondary": "#755b00",
+                        "surface-container-low": "#f2f4f3",
+                        "primary-fixed": "#c8ecc6",
+                        "on-secondary-container": "#765c00",
+                        "on-primary-container": "#264429",
+                        "on-tertiary-fixed": "#0e1f10",
+                        "surface-tint": "#476648",
+                        "on-tertiary-container": "#304230"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 8px 32px rgba(71, 102, 72, 0.04);
+        }
+        .text-glow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
+{% include "header.html" %}
+
+<main class="pt-20">
+    <section class="relative h-[870px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover brightness-[0.4]"
+                 data-alt="NSTN"
+                 src="../static/images/BG.jpg"/>
+        </div>
+        <div class="relative z-10 max-w-5xl px-8 text-center">
+            <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-normal mb-12">
+                我们的故事 — <br/>
+                <span class="text-primary-container">提升越南农产品价值之旅</span>
+            </h1>
+
+            <div class="max-w-4xl mx-auto">
+                <p class="text-white/90 text-xl md:text-2xl font-light italic leading-relaxed mb-8">
+                    "在西原农产品 (Nông Sản Tây Nguyên)，我们坚信，原产地的卓越品质与合作伙伴的信任是至高无上的基石。作为一家超越传统贸易的企业，我们每天都在践行使命，将这片广袤高原上最新鲜、最优质的特产推向世界，携手重塑越南水果在国际市场上的高端定位。"
+                </p>
+
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-[1px] bg-primary-container mb-4 opacity-60"></div>
+                    <p class="text-white font-bold text-xl tracking-tight">黎文名 (Lê Văn Danh)</p>
+                    <p class="text-primary-container text-xs uppercase tracking-[0.3em] font-medium opacity-80 mt-1">总经理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="space-y-6">
+                <span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'wght' 200;">visibility</span>
+                <h3 class="font-headline text-2xl font-bold text-primary">愿景</h3>
+                <p class="text-on-surface-variant leading-relaxed font-light">成为区域领先的高端农产品供应链品牌，在国际贸易版图上确立越南农产品的核心价值。</p>
+            </div>
+            <div class="space-y-6">
+                <span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'wght' 200;">flag</span>
+                <h3 class="font-headline text-2xl font-bold text-primary">使命</h3>
+                <p class="text-on-surface-variant leading-relaxed font-light">传承精华，优化价值链，确保果农与全球合作伙伴之间的利益和谐共赢。</p>
+            </div>
+            <div class="space-y-6">
+                <span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'wght' 200;">verified</span>
+                <h3 class="font-headline text-2xl font-bold text-primary">卓越品质</h3>
+                <p class="text-on-surface-variant leading-relaxed font-light">从种植区到包装出口环节进行严格监控，确保所有批次产品均符合最高级别的国际出口标准。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-surface-container-low py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="max-w-xl">
+                    <h2 class="font-headline text-4xl font-extrabold text-primary mb-6">优选核心产区</h2>
+                    <p class="text-on-surface-variant font-light">我们拥有并直接对接全国范围内，特别是西原（Tây Nguyên）黄金地带的标准化榴莲果园。</p>
+                </div>
+                <div class="flex gap-12">
+                    <div class="text-center">
+                        <span class="block font-headline text-5xl font-black text-secondary">500+公顷</span>
+                        <span class="text-sm font-medium uppercase tracking-widest text-outline">标准化种植区</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block font-headline text-5xl font-black text-secondary">15+年</span>
+                        <span class="text-sm font-medium uppercase tracking-widest text-outline">行业经验</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+                    <div class="aspect-[16/10] overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                             data-alt="DAKLAK"
+                             src="../static/images/VUON%201.png"/>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline text-xl font-bold text-primary mb-2">多乐省 (Đắk Lắk)</h4>
+                        <p class="text-sm text-on-surface-variant mb-4">拥有独特玄武岩红土的榴莲与咖啡之都。</p>
+                        <span class="text-secondary font-bold text-sm flex items-center gap-2">了解更多 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+                    <div class="aspect-[16/10] overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                             data-alt="ANOTHER"
+                             src="../static/images/HOA1.jpg"/>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline text-xl font-bold text-primary mb-2">其他省市产区</h4>
+                        <p class="text-sm text-on-surface-variant mb-4">丰富的原料产区，确保全年产量稳定供应。</p>
+                        <span class="text-secondary font-bold text-sm flex items-center gap-2">了解更多 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-y border-outline-variant/20">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h3 class="text-sm font-bold uppercase tracking-[0.3em] text-outline mb-12">国际认证体系</h3>
+            <div class="flex flex-wrap justify-center items-center gap-16 opacity-60 hover:opacity-100 transition-opacity">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-24 h-12 bg-surface-container flex items-center justify-center rounded font-bold text-xs">GLOBAL GAP/VIET GAP</div>
+                    <span class="text-[10px] text-outline">可持续农业</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-24 h-12 bg-surface-container flex items-center justify-center rounded font-bold text-xs text-primary">ISO 22000</div>
+                    <span class="text-[10px] text-outline">食品安全</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-24 h-12 bg-surface-container flex items-center justify-center rounded font-bold text-xs">HACCP</div>
+                    <span class="text-[10px] text-outline">风险控制</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8">
+        <div class="max-w-4xl mx-auto text-center bg-surface-container p-16 rounded-2xl">
+            <h2 class="font-headline text-3xl md:text-4xl font-extrabold text-primary mb-8">蓄势待发，将高端农产品推向全球市场</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-primary text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:scale-105 editorial-shadow">
+                    获取出口报价
+                </button>
+                <button class="bg-white text-primary border border-primary/20 px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:bg-primary/5">
+                    参观原料产区
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950">
+    <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-1">
+            <h3 class="font-manrope font-bold text-emerald-900 text-xl mb-6">西原农产品 (NSTN)</h3>
+            <p class="text-stone-500 text-sm leading-relaxed mb-6">通过符合国际标准的可持续种植与加工流程，提升越南农产品价值。</p>
+            <div class="flex gap-4">
+                <span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
+                <span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">language</span>
+                <span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</span>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-bold mb-6 text-emerald-900">快捷链接</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="aboutUS_cn.html">关于我们</a></li>
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="product_cn.html">产品系列</a></li>
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="#">生产流程</a></li>
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="#">市场动态</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold mb-6 text-emerald-900">B2B 业务支持</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">法律信息</a></li>
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">隐私政策</a></li>
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">联系方式</a></li>
+                <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">合作伙伴管理</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold mb-6 text-emerald-900">办公地址</h4>
+            <p class="text-stone-500 text-sm leading-relaxed mb-4">
+                <span class="font-bold">总部：</span> 越南多乐省克容帕县 (Krông Pắc, Đắk Lắk, Việt Nam)
+            </p>
+            <p class="text-stone-500 text-sm leading-relaxed">
+                <span class="font-bold">热线电话：</span> +84 0932 444 222<br/>
+                <span class="font-bold">电子邮箱：</span> congtytnhhtmdvnongsantaynguyen@gmail.com
+            </p>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200">
+        <p class="text-stone-500 text-xs text-center font-inter">
+            版权所有 2026 © 西原农产品商贸服务有限责任公司。税务登记号：6001769504。
+        </p>
+    </div>
+</footer>
+</body>
+</html>
