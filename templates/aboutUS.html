@@ -87,9 +87,23 @@
         .text-glow {
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+
+        section,
+        .bg-surface,
+        .bg-stone-50,
+        .bg-surface-container-low,
+        .bg-surface-container-lowest,
+        .bg-surface-container,
+        .bg-white {
+            background-color: transparent !important;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-cover bg-fixed bg-center bg-no-repeat"
+    style="background-image: url('../static/images/bag.jpg');">
+    <div class="absolute inset-0 bg-white/70"></div>
+  </div>
 <!-- Top Navigation Bar -->
 {% include "header.html" %}
 <main class="pt-20">

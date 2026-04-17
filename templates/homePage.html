@@ -1,529 +1,623 @@
 <!DOCTYPE html>
 
-<html class="light" lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Trang chủ - NSTN</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-error-container": "#93000a",
-                        "surface-container-highest": "#e1e3e2",
-                        "primary-fixed-dim": "#add0ab",
-                        "inverse-on-surface": "#eff1f0",
-                        "secondary-fixed-dim": "#e8c25d",
-                        "secondary-container": "#fdd66e",
-                        "error-container": "#ffdad6",
-                        "on-surface": "#191c1c",
-                        "outline": "#737970",
-                        "primary": "#476648",
-                        "on-background": "#191c1c",
-                        "tertiary-fixed-dim": "#b7ccb5",
-                        "on-secondary-fixed-variant": "#584400",
-                        "on-secondary-container": "#765c00",
-                        "on-primary": "#ffffff",
-                        "on-tertiary-fixed-variant": "#394b39",
-                        "on-secondary-fixed": "#241a00",
-                        "inverse-primary": "#add0ab",
-                        "on-tertiary-fixed": "#0e1f10",
-                        "background": "#f8faf9",
-                        "surface-container-low": "#f2f4f3",
-                        "on-secondary": "#ffffff",
-                        "tertiary": "#506350",
-                        "tertiary-container": "#99ae97",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-high": "#e6e9e8",
-                        "surface-tint": "#476648",
-                        "on-primary-container": "#264429",
-                        "on-surface-variant": "#424841",
-                        "on-primary-fixed-variant": "#2f4e32",
-                        "surface": "#f8faf9",
-                        "primary-container": "#8fb18e",
-                        "on-error": "#ffffff",
-                        "on-tertiary-container": "#304230",
-                        "surface-variant": "#e1e3e2",
-                        "tertiary-fixed": "#d3e8d0",
-                        "secondary-fixed": "#ffdf90",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#eceeed",
-                        "inverse-surface": "#2e3131",
-                        "surface-bright": "#f8faf9",
-                        "secondary": "#755b00",
-                        "outline-variant": "#c2c8be",
-                        "primary-fixed": "#c8ecc6",
-                        "surface-dim": "#d8dad9",
-                        "error": "#ba1a1a",
-                        "on-primary-fixed": "#032109"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                }
-            }
+<html class="light" lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Trang chủ - NSTN</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e1e3e2",
+            "primary-fixed-dim": "#add0ab",
+            "inverse-on-surface": "#eff1f0",
+            "secondary-fixed-dim": "#e8c25d",
+            "secondary-container": "#fdd66e",
+            "error-container": "#ffdad6",
+            "on-surface": "#191c1c",
+            "outline": "#737970",
+            "primary": "#476648",
+            "on-background": "#191c1c",
+            "tertiary-fixed-dim": "#b7ccb5",
+            "on-secondary-fixed-variant": "#584400",
+            "on-secondary-container": "#765c00",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#394b39",
+            "on-secondary-fixed": "#241a00",
+            "inverse-primary": "#add0ab",
+            "on-tertiary-fixed": "#0e1f10",
+            "background": "#f8faf9",
+            "surface-container-low": "#f2f4f3",
+            "on-secondary": "#ffffff",
+            "tertiary": "#506350",
+            "tertiary-container": "#99ae97",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e6e9e8",
+            "surface-tint": "#476648",
+            "on-primary-container": "#264429",
+            "on-surface-variant": "#424841",
+            "on-primary-fixed-variant": "#2f4e32",
+            "surface": "#f8faf9",
+            "primary-container": "#8fb18e",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#304230",
+            "surface-variant": "#e1e3e2",
+            "tertiary-fixed": "#d3e8d0",
+            "secondary-fixed": "#ffdf90",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eceeed",
+            "inverse-surface": "#2e3131",
+            "surface-bright": "#f8faf9",
+            "secondary": "#755b00",
+            "outline-variant": "#c2c8be",
+            "primary-fixed": "#c8ecc6",
+            "surface-dim": "#d8dad9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#032109"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
         }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .editorial-text-mask {
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .editorial-text-mask {
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    section,
+    .bg-surface,
+    .bg-stone-50,
+    .bg-surface-container-low {
+      background-color: transparent !important;
+    }
+
+    /* Thêm một lớp phủ mờ để chữ vẫn đọc được trên nền ảnh */
+    main {
+      background: rgba(255, 255, 255, 0.8);
+      /* Màu trắng mờ 80% */
+    }
+  </style>
 </head>
-<body class="bg-surface font-body text-on-surface">
-<!-- TopAppBar -->
-{% include "header.html" %}
-<main class="pt-24 overflow-x-hidden">
-<!-- Hero Section: Editorial & Asymmetric -->
-<section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto mb-24">
-<div class="grid grid-cols-12 gap-8 items-center w-full">
-<div class="col-span-12 lg:col-span-6 z-10">
-<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Di Sản Cao Nguyên</span>
-<h1 class="text-6xl md:text-8xl font-black font-headline text-primary mb-8 leading-[1.1] tracking-tight">
-                        Tinh Hoa <br/> <span class="text-secondary italic">Sầu Riêng</span> <br/> Xuất Khẩu.
-                    </h1>
-<p class="text-lg md:text-xl text-on-surface-variant max-w-lg mb-12 leading-relaxed">
-                        Giải pháp cung ứng sầu riêng Việt Nam đạt chuẩn xuất khẩu toàn cầu. Bằng sự chắt lọc tinh hoa từ tự nhiên và hệ thống kiểm soát chất lượng nghiêm ngặt, chúng tôi tự hào là đối tác uy tín, bảo chứng cho mọi chuyến hàng vươn tầm quốc tế.
-                    </p>
-<div class="flex flex-wrap gap-6">
-  <a href="product.html"
-     class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 w-fit">
-      <span>Khám phá sản phẩm</span>
-      <span class="material-symbols-outlined">arrow_forward</span>
-  </a>
-</div>
-</div>
-<div class="col-span-12 lg:col-span-6 relative h-[600px]">
-<div class="absolute -right-20 top-0 w-full h-full bg-primary-container rounded-[4rem] rotate-3 opacity-10"></div>
-<video
-  class="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl z-20 hover:scale-[1.02] transition-transform duration-700"
-  src="../static/images/VIDEOO.mp4"
-  autoplay
-  loop
-  muted
-  playsinline>
-</video>
-<div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-xl z-30 max-w-xs">
-<div class="flex items-center gap-4 mb-4">
-<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-<div>
-<p class="text-xs font-bold text-stone-500 uppercase tracking-widest">Tiêu chuẩn</p>
-<p class="text-lg font-bold font-headline text-primary">GLOBAL GAP/VIET GAP</p>
-</div>
-</div>
-<p class="text-sm text-on-surface-variant italic">"Đảm bảo chất lượng đồng nhất từ trang trại đến bàn ăn quốc tế."</p>
-</div>
-</div>
-</div>
-</section>
-<!-- About Us: Multi-column Strategy -->
-<section class="bg-stone-50 py-32">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-12 gap-16 items-start">
-<div class="col-span-12 lg:col-span-4">
-<h2 class="text-4xl font-black font-headline text-emerald-900 mb-8 leading-tight">Về Nông Sản Tây Nguyên</h2>
-<div class="h-1 w-24 bg-secondary mb-8"></div>
-<p class="text-on-surface-variant leading-loose mb-8">
-                            Chúng tôi không chỉ xuất khẩu trái cây; chúng tôi mang câu chuyện về đất, nắng và sự tận tâm của người nông dân Tây Nguyên ra thế giới. Với hơn 15 năm kinh nghiệm, chúng tôi là cầu nối tin cậy cho các đối tác B2B toàn cầu.
-                        </p>
-<a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
-                            Đọc thêm về lịch sử thương hiệu
-                            <span class="material-symbols-outlined">north_east</span>
-</a>
-</div>
-<div class="col-span-12 lg:col-span-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-4xl text-primary mb-6">agriculture</span>
-<h3 class="text-xl font-bold font-headline mb-4">Vùng nguyên liệu 500+ha</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Sở hữu và liên kết các vùng trồng đạt chuẩn tại Đắk Lắk và các tỉnh thành trên toàn quốc, đảm bảo sản lượng ổn định quanh năm.</p>
-</div>
-<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-4xl text-primary mb-6">factory</span>
-<h3 class="text-xl font-bold font-headline mb-4">Nhà máy đóng gói hiện đại</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Hệ thống nhà máy đóng gói và dây chuyền phân loại chất lượng cao và đạt tiêu chuẩn .</p>
-</div>
-<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-4xl text-primary mb-6">public</span>
-<h3 class="text-xl font-bold font-headline mb-4">Xuất khẩu đa quốc gia</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Đã có mặt tại các thị trường khó tính.</p>
-</div>
-<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-4xl text-primary mb-6">diversity_2</span>
-<h3 class="text-xl font-bold font-headline mb-4">Hợp tác bền vững</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Cam kết hỗ trợ kỹ thuật và bao tiêu sản phẩm cho hơn 1.000 hộ nông dân tại địa phương.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Product Grid: Studio Frame Style -->
-<section class="py-32 max-w-7xl mx-auto px-8">
-<div class="flex justify-between items-end mb-16">
-<div>
-<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Danh mục chủ lực</span>
-<h2 class="text-5xl font-black font-headline text-primary">Sản Phẩm Xuất Khẩu</h2>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<!-- Monthong Card -->
-<div class="group relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl">
-  <div class="h-[450px] overflow-hidden relative">
-    <img alt="Monthong Durian" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-         data-alt="High-resolution studio shot of a whole Monthong durian with its distinctive long shape and large pale gold thorns on a clean white table"
-         src="../static/images/THAI 2.png"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-      <a href="product.html" class="block text-center w-full bg-white text-primary font-bold py-4 rounded-xl hover:bg-secondary hover:text-white transition-colors">Chi tiết thông số</a>
-    </div>
+
+<body class="font-body text-on-surface">
+  <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-cover bg-fixed bg-center bg-no-repeat"
+    style="background-image: url('../static/images/bag.jpg');">
+    <div class="absolute inset-0 bg-white/70"></div>
   </div>
-<div class="p-10">
-<div class="flex justify-between items-start mb-6">
-<div>
-<h3 class="text-3xl font-black font-headline text-primary mb-2">Sầu riêng Monthong</h3>
-<p class="text-on-surface-variant font-medium">Loại: Grade A / Xuất khẩu</p>
-</div>
-<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg font-bold text-sm italic">TOP SELLER</span>
-</div>
-<ul class="space-y-4 mb-8">
-<li class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-sm">circle</span>
-                                Cơm vàng nhạt, dày, vị ngọt thanh
-                            </li>
-<li class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-sm">circle</span>
-                                Trọng lượng: 2.5kg - 5.0kg / quả
-                            </li>
-<li class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-sm">circle</span>
-                                Bảo quản lạnh: 12-15°C (7-10 ngày)
-                            </li>
-</ul>
-</div>
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-</div>
-<!-- Ri6 Card -->
-<div class="group relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl">
-  <div class="h-[450px] overflow-hidden relative">
-    <img alt="Ri6 Durian" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-         data-alt="Premium Ri6 durian segments showing deep yellow, creamy flesh in a minimalist wooden bowl with soft ambient light"
-         src="../static/images/RI6 1.png"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-      <a href="product.html" class="block text-center w-full bg-white text-primary font-bold py-4 rounded-xl hover:bg-secondary hover:text-white transition-colors">Chi tiết thông số</a>
-    </div>
-  </div>
-<div class="p-10">
-<div class="flex justify-between items-start mb-6">
-<div>
-<h3 class="text-3xl font-black font-headline text-primary mb-2">Sầu riêng Ri6</h3>
-<p class="text-on-surface-variant font-medium">Đặc sản: Việt Nam</p>
-</div>
-<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-2 rounded-lg font-bold text-sm">TOP SELLER</span>
-</div>
-<ul class="space-y-4 mb-8">
-<li class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-sm">circle</span>
-                                Cơm vàng đậm, béo ngậy, hạt lép
-                            </li>
-<li class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-sm">circle</span>
-                                Hình dáng bầu tròn, gai xanh đẹp
-                            </li>
-<li class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-sm">circle</span>
-                                Tiêu chuẩn đóng gói: Thùng 10kg
-                            </li>
-</ul>
-</div>
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-</div>
-</div>
-</section>
-<!-- Supply Chain: Tonal Transitions -->
-<section class="bg-surface-container-low py-32">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-24">
-<h2 class="text-4xl font-black font-headline text-primary mb-6">Quy Trình &amp; Tiêu Chuẩn 5 Sao</h2>
-<p class="max-w-2xl mx-auto text-on-surface-variant">Kiểm soát nghiêm ngặt từng khâu để đảm bảo chất lượng trái cây tươi ngon nhất khi đến tay khách hàng.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
-<!-- Progress Line (Hidden on Mobile) -->
-<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -translate-y-1/2 z-0"></div>
-<div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-on-primary-container text-3xl">psychiatry</span>
-</div>
-<h4 class="font-bold font-headline mb-2">Canh tác</h4>
-<p class="text-xs text-stone-500">Chuẩn Global GAP/Viet GAP</p>
-</div>
-<div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-on-primary-container text-3xl">content_cut</span>
-</div>
-<h4 class="font-bold font-headline mb-2">Thu hoạch</h4>
-<p class="text-xs text-stone-500">Lựa chọn từng quả đạt độ chín</p>
-</div>
-<div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-on-primary-container text-3xl">science</span>
-</div>
-<h4 class="font-bold font-headline mb-2">Kiểm định</h4>
-<p class="text-xs text-stone-500">Phân loại &amp; Test dư lượng</p>
-</div>
-<div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-on-primary-container text-3xl">ac_unit</span>
-</div>
-<h4 class="font-bold font-headline mb-2">Đóng gói</h4>
-<p class="text-xs text-stone-500">Xử lí quy trình khép kín, an toàn vệ sinh thực phẩm</p>
-</div>
-<div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm border-2 border-secondary/20">
-<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-on-secondary-container text-3xl">local_shipping</span>
-</div>
-<h4 class="font-bold font-headline mb-2">Xuất khẩu</h4>
-<p class="text-xs text-stone-500">Vận chuyển lạnh quốc tế</p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section: Glassmorphism -->
-<section class="py-32">
-<div class="max-w-7xl mx-auto px-8 relative">
-<div class="bg-primary rounded-[3rem] p-16 md:p-24 overflow-hidden relative shadow-2xl">
-<!-- Background texture/image -->
-<div class="absolute inset-0 opacity-20">
-  <img alt="Mist in Highlands" class="w-full h-full object-cover"
-       data-alt="Product - NSTN "
-       src="../static/images/HH.jpg"/>
-</div>
-<div class="relative z-10 flex flex-col items-center text-center">
-  <h2 class="text-4xl md:text-6xl font-black font-headline text-white mb-8 leading-tight">Khởi đầu mối quan hệ <br/> hợp tác bền vững.</h2>
-  <p class="text-primary-fixed text-lg md:text-xl max-w-2xl mb-12 opacity-90">Kết nối trực tiếp với nguồn cung ứng sầu riêng toàn quốc. Chúng tôi sẵn sàng hỗ trợ mọi yêu cầu về thu mua và xuất khẩu.</p>
-  <div class="flex flex-col sm:flex-row gap-6 w-full max-w-md justify-center">
-    <a href="contact.html"
-       class="inline-block text-center bg-secondary text-white font-bold py-5 px-[15px] rounded-xl text-lg shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300">
-        Gửi Yêu Cầu Báo Giá
-    </a>
-  </div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<!-- Animated Tractor -->
-<div class="relative w-full overflow-hidden" style="height: 100px; background: transparent;">
-
-  <!-- Vehicle Container -->
-  <div id="tractor-vehicle" class="absolute flex flex-col items-center" style="left: -160px; bottom: 0;">
-
-    <!-- Speech Bubble -->
-    <div id="speech-bubble" class="mb-1 bg-white border-2 border-green-500 rounded-xl px-3 py-2 text-xs font-bold text-green-700 whitespace-nowrap shadow-md relative" style="opacity: 0; transition: opacity 0.4s ease;">
-      Nông Sản Tây Nguyên xin chào 🌿!
-      <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r-2 border-b-2 border-green-500 rotate-45"></div>
-    </div>
-
-    <!-- SVG Xe Công Nông + Người Chibi + Sầu Riêng -->
-    <svg width="105" height="56" viewBox="0 0 140 75" xmlns="http://www.w3.org/2000/svg">
-
-      <!-- ===== SẦU RIÊNG TRÊN THÙNG XE ===== -->
-      <!-- Thân sầu riêng -->
-      <ellipse cx="28" cy="34" rx="14" ry="12" fill="#7C6B1E"/>
-      <!-- Gai sầu riêng -->
-      <polygon points="28,18 25,26 31,26" fill="#5C4F10"/>
-      <polygon points="18,22 20,30 26,27" fill="#5C4F10"/>
-      <polygon points="38,22 36,30 30,27" fill="#5C4F10"/>
-      <polygon points="14,30 18,36 22,32" fill="#5C4F10"/>
-      <polygon points="42,30 38,36 34,32" fill="#5C4F10"/>
-      <polygon points="16,40 21,44 22,38" fill="#5C4F10"/>
-      <polygon points="40,40 35,44 34,38" fill="#5C4F10"/>
-      <polygon points="28,46 25,38 31,38" fill="#5C4F10"/>
-      <!-- Vân sầu riêng -->
-      <path d="M20 28 Q28 22 36 28" stroke="#5C4F10" stroke-width="0.8" fill="none"/>
-      <path d="M17 35 Q28 28 39 35" stroke="#5C4F10" stroke-width="0.8" fill="none"/>
-      <path d="M19 42 Q28 36 37 42" stroke="#5C4F10" stroke-width="0.8" fill="none"/>
-      <!-- Cuống sầu riêng -->
-      <line x1="28" y1="18" x2="28" y2="14" stroke="#5C4F10" stroke-width="2" stroke-linecap="round"/>
-
-      <!-- ===== NGƯỜI CHIBI ===== -->
-      <!-- Thân áo -->
-      <rect x="58" y="28" width="18" height="16" rx="3" fill="#3B82F6"/>
-      <!-- Đầu -->
-      <circle cx="67" cy="22" r="9" fill="#FBBF24"/>
-      <!-- Mắt -->
-      <circle cx="63" cy="21" r="1.5" fill="#1E293B"/>
-      <circle cx="71" cy="21" r="1.5" fill="#1E293B"/>
-      <!-- Miệng -->
-      <path d="M63 25 Q67 28 71 25" stroke="#1E293B" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Nón lá -->
-      <ellipse cx="67" cy="14" rx="13" ry="4" fill="#D97706"/>
-      <ellipse cx="67" cy="13" rx="7" ry="3" fill="#F59E0B"/>
-      <!-- Tay vẫy -->
-      <line x1="58" y1="32" x2="50" y2="24" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="49" cy="23" r="3" fill="#FBBF24"/>
-      <!-- Tay phải -->
-      <line x1="76" y1="32" x2="82" y2="36" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
-      <!-- Chân -->
-      <rect x="60" y="43" width="5" height="8" rx="2" fill="#1D4ED8"/>
-      <rect x="69" y="43" width="5" height="8" rx="2" fill="#1D4ED8"/>
-
-      <!-- ===== XE CÔNG NÔNG ===== -->
-      <!-- Thùng xe -->
-      <rect x="5" y="38" width="50" height="18" rx="3" fill="#92400E"/>
-      <rect x="7" y="40" width="46" height="14" rx="2" fill="#B45309"/>
-      <!-- Thành thùng xe -->
-      <line x1="20" y1="38" x2="20" y2="56" stroke="#92400E" stroke-width="1.5"/>
-      <line x1="35" y1="38" x2="35" y2="56" stroke="#92400E" stroke-width="1.5"/>
-      <!-- Cabin -->
-      <rect x="52" y="30" width="45" height="26" rx="4" fill="#D97706"/>
-      <!-- Kính -->
-      <rect x="82" y="33" width="12" height="14" rx="2" fill="#BAE6FD" opacity="0.8"/>
-      <!-- Đèn -->
-      <circle cx="100" cy="42" r="4" fill="#FEF08A"/>
-      <circle cx="100" cy="42" r="2.5" fill="#FDE047"/>
-      <!-- Ống khói -->
-      <rect x="88" y="20" width="5" height="12" rx="2" fill="#374151"/>
-      <!-- Khói -->
-      <circle cx="90" cy="17" r="3" fill="#9CA3AF" opacity="0.6"/>
-      <circle cx="93" cy="13" r="2.5" fill="#9CA3AF" opacity="0.4"/>
-      <circle cx="88" cy="10" r="2" fill="#9CA3AF" opacity="0.3"/>
-      <!-- Bánh xe sau -->
-      <circle cx="25" cy="62" r="13" fill="#1E293B"/>
-      <circle cx="25" cy="62" r="9" fill="#374151"/>
-      <circle cx="25" cy="62" r="4" fill="#6B7280"/>
-      <line x1="25" y1="53" x2="25" y2="71" stroke="#4B5563" stroke-width="1.5"/>
-      <line x1="16" y1="62" x2="34" y2="62" stroke="#4B5563" stroke-width="1.5"/>
-      <line x1="19" y1="55" x2="31" y2="69" stroke="#4B5563" stroke-width="1.5"/>
-      <line x1="31" y1="55" x2="19" y2="69" stroke="#4B5563" stroke-width="1.5"/>
-      <!-- Bánh xe trước -->
-      <circle cx="90" cy="64" r="10" fill="#1E293B"/>
-      <circle cx="90" cy="64" r="7" fill="#374151"/>
-      <circle cx="90" cy="64" r="3" fill="#6B7280"/>
-      <line x1="90" y1="57" x2="90" y2="71" stroke="#4B5563" stroke-width="1.5"/>
-      <line x1="83" y1="64" x2="97" y2="64" stroke="#4B5563" stroke-width="1.5"/>
-      <!-- Vô lăng -->
-      <circle cx="83" cy="38" r="5" fill="none" stroke="#92400E" stroke-width="2"/>
-      <line x1="83" y1="33" x2="83" y2="43" stroke="#92400E" stroke-width="1.5"/>
-      <line x1="78" y1="38" x2="88" y2="38" stroke="#92400E" stroke-width="1.5"/>
-      <!-- Ghế -->
-      <rect x="55" y="35" width="12" height="6" rx="2" fill="#B45309"/>
-    </svg>
-  </div>
-</div>
-
-<style>
-  #tractor-vehicle {
-    animation: driveAcross 25s linear infinite;
-    opacity: 0.65;
-  }
-
-  @keyframes driveAcross {
-    0%   { left: -160px; }
-    100% { left: 100%; }
-  }
-
-  /* Hiệu ứng nhún xe */
-  #tractor-svg {
-    animation: bounce 0.5s ease-in-out infinite alternate;
-    transform-origin: bottom center;
-  }
-
-  @keyframes bounce {
-    0%   { transform: translateY(0px); }
-    100% { transform: translateY(-4px); }
-  }
-
-  /* Hiệu ứng khói xì theo nhịp nhún */
-  #smoke circle {
-    animation: smokeOut 0.5s ease-out infinite;
-    transform-origin: center;
-  }
-
-  @keyframes smokeOut {
-    0%   { opacity: 0; transform: scale(0.5) translateY(0); }
-    50%  { opacity: 0.7; }
-    100% { opacity: 0; transform: scale(1.5) translateY(-10px); }
-  }
-</style>
-
-<script>
-  const bubble = document.getElementById('speech-bubble');
-
-  function showBubble() {
-    bubble.style.opacity = '1';
-    setTimeout(() => {
-      bubble.style.opacity = '0';
-    }, 3000);
-  }
-
-  // Hiện lần đầu sau 1s, sau đó mỗi 10s
-  setTimeout(() => {
-    showBubble();
-    setInterval(showBubble, 10000);
-  }, 1000);
-</script>
-<footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950">
-<div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="col-span-1 md:col-span-1">
-<h3 class="font-manrope font-bold text-emerald-900 text-xl mb-6">Nông Sản Tây Nguyên</h3>
-<p class="text-stone-500 text-sm leading-relaxed mb-6">Nâng tầm giá trị nông sản Việt thông qua quy trình canh tác và chế biến bền vững theo tiêu chuẩn quốc tế</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
-<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">language</span>
-<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</span>
-</div>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-emerald-900">Liên kết nhanh</h4>
-<ul class="space-y-4">
-  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="aboutUS.html">Về chúng tôi</a></li>
-  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="product.html">Dòng sản phẩm</a></li>
-  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="#">Quy trình sản xuất</a></li>
-  <li><a class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700" href="#">Tin tức thị trường</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-emerald-900">Hỗ trợ B2B</h4>
-<ul class="space-y-4">
-<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Legal Information</a></li>
-<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Contact Details</a></li>
-<li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Quản lý đối tác</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-emerald-900">Văn phòng</h4>
-<p class="text-stone-500 text-sm leading-relaxed mb-4">
-<span class="font-bold">Trụ sở:</span> Xã Krông Pắc, Tỉnh Đắk Lắk, Việt Nam.
-                </p>
-<p class="text-stone-500 text-sm leading-relaxed">
-<span class="font-bold">Hotline:</span> +84 0932 444 222<br/>
-<span class="font-bold">Email:</span> congtytnhhtmdvnongsantaynguyen@gmail.com
-                </p>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200">
-<p class="text-stone-500 text-xs text-center font-inter">
-                Copyright 2026 © CÔNG TY TNHH TM&DV NÔNG SẢN TÂY NGUYÊN. MST: 6001769504.
+  <!-- TopAppBar -->
+  {% include "header.html" %}
+  <main class="pt-24 overflow-x-hidden ">
+    <!-- Hero Section: Editorial & Asymmetric -->
+    <section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto mb-24">
+      <div class="grid grid-cols-12 gap-8 items-center w-full">
+        <div class="col-span-12 lg:col-span-6 z-10">
+          <span
+            class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Di
+            Sản Cao Nguyên</span>
+          <h1 class="text-6xl md:text-8xl font-black font-headline text-primary mb-8 leading-[1.1] tracking-tight">
+            Tinh Hoa <br /> <span class="text-secondary italic">Sầu Riêng</span> <br /> Xuất Khẩu.
+          </h1>
+          <p class="text-lg md:text-xl text-on-surface-variant max-w-lg mb-12 leading-relaxed">
+            Giải pháp cung ứng sầu riêng Việt Nam đạt chuẩn xuất khẩu toàn cầu. Bằng sự chắt lọc tinh hoa từ tự nhiên và
+            hệ thống kiểm soát chất lượng nghiêm ngặt, chúng tôi tự hào là đối tác uy tín, bảo chứng cho mọi chuyến hàng
+            vươn tầm quốc tế.
+          </p>
+          <div class="flex flex-wrap gap-6">
+            <a href="product.html"
+              class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 w-fit">
+              <span>Khám phá sản phẩm</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-6 relative h-[600px]">
+          <div class="absolute -right-20 top-0 w-full h-full bg-primary-container rounded-[4rem] rotate-3 opacity-10">
+          </div>
+          <video
+            class="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl z-20 hover:scale-[1.02] transition-transform duration-700"
+            src="../static/images/VIDEOO.mp4" autoplay loop muted playsinline>
+          </video>
+          <div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-xl z-30 max-w-xs">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="material-symbols-outlined text-secondary text-4xl"
+                style="font-variation-settings: 'FILL' 1;">verified_user</span>
+              <div>
+                <p class="text-xs font-bold text-stone-500 uppercase tracking-widest">Tiêu chuẩn</p>
+                <p class="text-lg font-bold font-headline text-primary">GLOBAL GAP/VIET GAP</p>
+              </div>
+            </div>
+            <p class="text-sm text-on-surface-variant italic">"Đảm bảo chất lượng đồng nhất từ trang trại đến bàn ăn
+              quốc tế."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Us: Multi-column Strategy -->
+    <section class="bg-stone-50 py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-12 gap-16 items-start">
+          <div class="col-span-12 lg:col-span-4">
+            <h2 class="text-4xl font-black font-headline text-emerald-900 mb-8 leading-tight">Về Nông Sản Tây Nguyên
+            </h2>
+            <div class="h-1 w-24 bg-secondary mb-8"></div>
+            <p class="text-on-surface-variant leading-loose mb-8">
+              Chúng tôi không chỉ xuất khẩu trái cây; chúng tôi mang câu chuyện về đất, nắng và sự tận tâm của người
+              nông dân Tây Nguyên ra thế giới. Với hơn 15 năm kinh nghiệm, chúng tôi là cầu nối tin cậy cho các đối tác
+              B2B toàn cầu.
             </p>
-</div>
-</footer>
-</body></html>
+            <a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
+              Đọc thêm về lịch sử thương hiệu
+              <span class="material-symbols-outlined">north_east</span>
+            </a>
+          </div>
+          <div class="col-span-12 lg:col-span-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-6">agriculture</span>
+                <h3 class="text-xl font-bold font-headline mb-4">Vùng nguyên liệu 500+ha</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Sở hữu và liên kết các vùng trồng đạt chuẩn
+                  tại Đắk Lắk và các tỉnh thành trên toàn quốc, đảm bảo sản lượng ổn định quanh năm.</p>
+              </div>
+              <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-6">factory</span>
+                <h3 class="text-xl font-bold font-headline mb-4">Nhà máy đóng gói hiện đại</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Hệ thống nhà máy đóng gói và dây chuyền phân
+                  loại chất lượng cao và đạt tiêu chuẩn .</p>
+              </div>
+              <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-6">public</span>
+                <h3 class="text-xl font-bold font-headline mb-4">Xuất khẩu đa quốc gia</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Đã có mặt tại các thị trường khó tính.</p>
+              </div>
+              <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-6">diversity_2</span>
+                <h3 class="text-xl font-bold font-headline mb-4">Hợp tác bền vững</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Cam kết hỗ trợ kỹ thuật và bao tiêu sản phẩm
+                  cho hơn 1.000 hộ nông dân tại địa phương.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product Grid: Studio Frame Style -->
+    <section class="py-32 max-w-7xl mx-auto px-8">
+      <div class="flex justify-between items-end mb-16">
+        <div>
+          <span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Danh mục chủ lực</span>
+          <h2 class="text-5xl font-black font-headline text-primary">Sản Phẩm Xuất Khẩu</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Monthong Card -->
+        <div
+          class="group relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl">
+          <div class="h-[450px] overflow-hidden relative">
+            <img alt="Monthong Durian"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              data-alt="High-resolution studio shot of a whole Monthong durian with its distinctive long shape and large pale gold thorns on a clean white table"
+              src="../static/images/THAI 2.png" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <a href="product.html"
+                class="block text-center w-full bg-white text-primary font-bold py-4 rounded-xl hover:bg-secondary hover:text-white transition-colors">Chi
+                tiết thông số</a>
+            </div>
+          </div>
+          <div class="p-10">
+            <div class="flex justify-between items-start mb-6">
+              <div>
+                <h3 class="text-3xl font-black font-headline text-primary mb-2">Sầu riêng Monthong</h3>
+                <p class="text-on-surface-variant font-medium">Loại: Grade A / Xuất khẩu</p>
+              </div>
+              <span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg font-bold text-sm italic">TOP
+                SELLER</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Cơm vàng nhạt, dày, vị ngọt thanh
+              </li>
+              <li class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Trọng lượng: 2.5kg - 5.0kg / quả
+              </li>
+              <li class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Bảo quản lạnh: 12-15°C (7-10 ngày)
+              </li>
+            </ul>
+          </div>
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+        <!-- Ri6 Card -->
+        <div
+          class="group relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl">
+          <div class="h-[450px] overflow-hidden relative">
+            <img alt="Ri6 Durian"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              data-alt="Premium Ri6 durian segments showing deep yellow, creamy flesh in a minimalist wooden bowl with soft ambient light"
+              src="../static/images/RI6 1.png" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <a href="product.html"
+                class="block text-center w-full bg-white text-primary font-bold py-4 rounded-xl hover:bg-secondary hover:text-white transition-colors">Chi
+                tiết thông số</a>
+            </div>
+          </div>
+          <div class="p-10">
+            <div class="flex justify-between items-start mb-6">
+              <div>
+                <h3 class="text-3xl font-black font-headline text-primary mb-2">Sầu riêng Ri6</h3>
+                <p class="text-on-surface-variant font-medium">Đặc sản: Việt Nam</p>
+              </div>
+              <span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-2 rounded-lg font-bold text-sm">TOP
+                SELLER</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Cơm vàng đậm, béo ngậy, hạt lép
+              </li>
+              <li class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Hình dáng bầu tròn, gai xanh đẹp
+              </li>
+              <li class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Tiêu chuẩn đóng gói: Thùng 10kg
+              </li>
+            </ul>
+          </div>
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Supply Chain: Tonal Transitions -->
+    <section class="bg-surface-container-low py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl font-black font-headline text-primary mb-6">Quy Trình &amp; Tiêu Chuẩn 5 Sao</h2>
+          <p class="max-w-2xl mx-auto text-on-surface-variant">Kiểm soát nghiêm ngặt từng khâu để đảm bảo chất lượng
+            trái cây tươi ngon nhất khi đến tay khách hàng.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+          <!-- Progress Line (Hidden on Mobile) -->
+          <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -translate-y-1/2 z-0">
+          </div>
+          <div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
+            <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-on-primary-container text-3xl">psychiatry</span>
+            </div>
+            <h4 class="font-bold font-headline mb-2">Canh tác</h4>
+            <p class="text-xs text-stone-500">Chuẩn Global GAP/Viet GAP</p>
+          </div>
+          <div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
+            <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-on-primary-container text-3xl">content_cut</span>
+            </div>
+            <h4 class="font-bold font-headline mb-2">Thu hoạch</h4>
+            <p class="text-xs text-stone-500">Lựa chọn từng quả đạt độ chín</p>
+          </div>
+          <div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
+            <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-on-primary-container text-3xl">science</span>
+            </div>
+            <h4 class="font-bold font-headline mb-2">Kiểm định</h4>
+            <p class="text-xs text-stone-500">Phân loại &amp; Test dư lượng</p>
+          </div>
+          <div class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
+            <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-on-primary-container text-3xl">ac_unit</span>
+            </div>
+            <h4 class="font-bold font-headline mb-2">Đóng gói</h4>
+            <p class="text-xs text-stone-500">Xử lí quy trình khép kín, an toàn vệ sinh thực phẩm</p>
+          </div>
+          <div
+            class="relative z-10 bg-white p-8 rounded-2xl flex flex-col items-center text-center shadow-sm border-2 border-secondary/20">
+            <div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-on-secondary-container text-3xl">local_shipping</span>
+            </div>
+            <h4 class="font-bold font-headline mb-2">Xuất khẩu</h4>
+            <p class="text-xs text-stone-500">Vận chuyển lạnh quốc tế</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section: Glassmorphism -->
+    <section class="py-32">
+      <div class="max-w-7xl mx-auto px-8 relative">
+        <div class="bg-primary rounded-[3rem] p-16 md:p-24 overflow-hidden relative shadow-2xl">
+          <!-- Background texture/image -->
+          <div class="absolute inset-0 opacity-20">
+            <img alt="Mist in Highlands" class="w-full h-full object-cover" data-alt="Product - NSTN "
+              src="../static/images/HH.jpg" />
+          </div>
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <h2 class="text-4xl md:text-6xl font-black font-headline text-white mb-8 leading-tight">Khởi đầu mối quan hệ
+              <br /> hợp tác bền vững.</h2>
+            <p class="text-primary-fixed text-lg md:text-xl max-w-2xl mb-12 opacity-90">Kết nối trực tiếp với nguồn cung
+              ứng sầu riêng toàn quốc. Chúng tôi sẵn sàng hỗ trợ mọi yêu cầu về thu mua và xuất khẩu.</p>
+            <div class="flex flex-col sm:flex-row gap-6 w-full max-w-md justify-center">
+              <a href="contact.html"
+                class="inline-block text-center bg-secondary text-white font-bold py-5 px-[15px] rounded-xl text-lg shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300">
+                Gửi Yêu Cầu Báo Giá
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <!-- Animated Tractor -->
+  <div class="relative w-full overflow-hidden" style="height: 100px; background: transparent;">
+
+    <!-- Vehicle Container -->
+    <div id="tractor-vehicle" class="absolute flex flex-col items-center" style="left: -160px; bottom: 0;">
+
+      <!-- Speech Bubble -->
+      <div id="speech-bubble"
+        class="mb-1 bg-white border-2 border-green-500 rounded-xl px-3 py-2 text-xs font-bold text-green-700 whitespace-nowrap shadow-md relative"
+        style="opacity: 0; transition: opacity 0.4s ease;">
+        Nông Sản Tây Nguyên xin chào 🌿!
+        <div
+          class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r-2 border-b-2 border-green-500 rotate-45">
+        </div>
+      </div>
+
+      <!-- SVG Xe Công Nông + Người Chibi + Sầu Riêng -->
+      <svg width="105" height="56" viewBox="0 0 140 75" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ===== SẦU RIÊNG TRÊN THÙNG XE ===== -->
+        <!-- Thân sầu riêng -->
+        <ellipse cx="28" cy="34" rx="14" ry="12" fill="#7C6B1E" />
+        <!-- Gai sầu riêng -->
+        <polygon points="28,18 25,26 31,26" fill="#5C4F10" />
+        <polygon points="18,22 20,30 26,27" fill="#5C4F10" />
+        <polygon points="38,22 36,30 30,27" fill="#5C4F10" />
+        <polygon points="14,30 18,36 22,32" fill="#5C4F10" />
+        <polygon points="42,30 38,36 34,32" fill="#5C4F10" />
+        <polygon points="16,40 21,44 22,38" fill="#5C4F10" />
+        <polygon points="40,40 35,44 34,38" fill="#5C4F10" />
+        <polygon points="28,46 25,38 31,38" fill="#5C4F10" />
+        <!-- Vân sầu riêng -->
+        <path d="M20 28 Q28 22 36 28" stroke="#5C4F10" stroke-width="0.8" fill="none" />
+        <path d="M17 35 Q28 28 39 35" stroke="#5C4F10" stroke-width="0.8" fill="none" />
+        <path d="M19 42 Q28 36 37 42" stroke="#5C4F10" stroke-width="0.8" fill="none" />
+        <!-- Cuống sầu riêng -->
+        <line x1="28" y1="18" x2="28" y2="14" stroke="#5C4F10" stroke-width="2" stroke-linecap="round" />
+
+        <!-- ===== NGƯỜI CHIBI ===== -->
+        <!-- Thân áo -->
+        <rect x="58" y="28" width="18" height="16" rx="3" fill="#3B82F6" />
+        <!-- Đầu -->
+        <circle cx="67" cy="22" r="9" fill="#FBBF24" />
+        <!-- Mắt -->
+        <circle cx="63" cy="21" r="1.5" fill="#1E293B" />
+        <circle cx="71" cy="21" r="1.5" fill="#1E293B" />
+        <!-- Miệng -->
+        <path d="M63 25 Q67 28 71 25" stroke="#1E293B" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <!-- Nón lá -->
+        <ellipse cx="67" cy="14" rx="13" ry="4" fill="#D97706" />
+        <ellipse cx="67" cy="13" rx="7" ry="3" fill="#F59E0B" />
+        <!-- Tay vẫy -->
+        <line x1="58" y1="32" x2="50" y2="24" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" />
+        <circle cx="49" cy="23" r="3" fill="#FBBF24" />
+        <!-- Tay phải -->
+        <line x1="76" y1="32" x2="82" y2="36" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" />
+        <!-- Chân -->
+        <rect x="60" y="43" width="5" height="8" rx="2" fill="#1D4ED8" />
+        <rect x="69" y="43" width="5" height="8" rx="2" fill="#1D4ED8" />
+
+        <!-- ===== XE CÔNG NÔNG ===== -->
+        <!-- Thùng xe -->
+        <rect x="5" y="38" width="50" height="18" rx="3" fill="#92400E" />
+        <rect x="7" y="40" width="46" height="14" rx="2" fill="#B45309" />
+        <!-- Thành thùng xe -->
+        <line x1="20" y1="38" x2="20" y2="56" stroke="#92400E" stroke-width="1.5" />
+        <line x1="35" y1="38" x2="35" y2="56" stroke="#92400E" stroke-width="1.5" />
+        <!-- Cabin -->
+        <rect x="52" y="30" width="45" height="26" rx="4" fill="#D97706" />
+        <!-- Kính -->
+        <rect x="82" y="33" width="12" height="14" rx="2" fill="#BAE6FD" opacity="0.8" />
+        <!-- Đèn -->
+        <circle cx="100" cy="42" r="4" fill="#FEF08A" />
+        <circle cx="100" cy="42" r="2.5" fill="#FDE047" />
+        <!-- Ống khói -->
+        <rect x="88" y="20" width="5" height="12" rx="2" fill="#374151" />
+        <!-- Khói -->
+        <circle cx="90" cy="17" r="3" fill="#9CA3AF" opacity="0.6" />
+        <circle cx="93" cy="13" r="2.5" fill="#9CA3AF" opacity="0.4" />
+        <circle cx="88" cy="10" r="2" fill="#9CA3AF" opacity="0.3" />
+        <!-- Bánh xe sau -->
+        <circle cx="25" cy="62" r="13" fill="#1E293B" />
+        <circle cx="25" cy="62" r="9" fill="#374151" />
+        <circle cx="25" cy="62" r="4" fill="#6B7280" />
+        <line x1="25" y1="53" x2="25" y2="71" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="16" y1="62" x2="34" y2="62" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="19" y1="55" x2="31" y2="69" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="31" y1="55" x2="19" y2="69" stroke="#4B5563" stroke-width="1.5" />
+        <!-- Bánh xe trước -->
+        <circle cx="90" cy="64" r="10" fill="#1E293B" />
+        <circle cx="90" cy="64" r="7" fill="#374151" />
+        <circle cx="90" cy="64" r="3" fill="#6B7280" />
+        <line x1="90" y1="57" x2="90" y2="71" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="83" y1="64" x2="97" y2="64" stroke="#4B5563" stroke-width="1.5" />
+        <!-- Vô lăng -->
+        <circle cx="83" cy="38" r="5" fill="none" stroke="#92400E" stroke-width="2" />
+        <line x1="83" y1="33" x2="83" y2="43" stroke="#92400E" stroke-width="1.5" />
+        <line x1="78" y1="38" x2="88" y2="38" stroke="#92400E" stroke-width="1.5" />
+        <!-- Ghế -->
+        <rect x="55" y="35" width="12" height="6" rx="2" fill="#B45309" />
+      </svg>
+    </div>
+  </div>
+
+  <style>
+    #tractor-vehicle {
+      animation: driveAcross 25s linear infinite;
+      opacity: 0.65;
+    }
+
+    @keyframes driveAcross {
+      0% {
+        left: -160px;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Hiệu ứng nhún xe */
+    #tractor-svg {
+      animation: bounce 0.5s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-4px);
+      }
+    }
+
+    /* Hiệu ứng khói xì theo nhịp nhún */
+    #smoke circle {
+      animation: smokeOut 0.5s ease-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes smokeOut {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(0);
+      }
+
+      50% {
+        opacity: 0.7;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-10px);
+      }
+    }
+  </style>
+
+  <script>
+    const bubble = document.getElementById('speech-bubble');
+
+    function showBubble() {
+      bubble.style.opacity = '1';
+      setTimeout(() => {
+        bubble.style.opacity = '0';
+      }, 3000);
+    }
+
+    // Hiện lần đầu sau 1s, sau đó mỗi 10s
+    setTimeout(() => {
+      showBubble();
+      setInterval(showBubble, 10000);
+    }, 1000);
+  </script>
+  <footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950">
+    <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-1">
+        <h3 class="font-manrope font-bold text-emerald-900 text-xl mb-6">Nông Sản Tây Nguyên</h3>
+        <p class="text-stone-500 text-sm leading-relaxed mb-6">Nâng tầm giá trị nông sản Việt thông qua quy trình canh
+          tác và chế biến bền vững theo tiêu chuẩn quốc tế</p>
+        <div class="flex gap-4">
+          <span
+            class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
+          <span
+            class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">language</span>
+          <span
+            class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6 text-emerald-900">Liên kết nhanh</h4>
+        <ul class="space-y-4">
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="aboutUS.html">Về chúng tôi</a></li>
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="product.html">Dòng sản phẩm</a></li>
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="#">Quy trình sản xuất</a></li>
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="#">Tin tức thị trường</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6 text-emerald-900">Hỗ trợ B2B</h4>
+        <ul class="space-y-4">
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Legal Information</a></li>
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Privacy Policy</a></li>
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Contact Details</a></li>
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Quản lý đối tác</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6 text-emerald-900">Văn phòng</h4>
+        <p class="text-stone-500 text-sm leading-relaxed mb-4">
+          <span class="font-bold">Trụ sở:</span> Xã Krông Pắc, Tỉnh Đắk Lắk, Việt Nam.
+        </p>
+        <p class="text-stone-500 text-sm leading-relaxed">
+          <span class="font-bold">Hotline:</span> +84 0932 444 222<br />
+          <span class="font-bold">Email:</span> congtytnhhtmdvnongsantaynguyen@gmail.com
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200">
+      <p class="text-stone-500 text-xs text-center font-inter">
+        Copyright 2026 © CÔNG TY TNHH TM&DV NÔNG SẢN TÂY NGUYÊN. MST: 6001769504.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

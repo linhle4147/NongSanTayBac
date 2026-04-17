@@ -7,24 +7,30 @@
 <body>
 <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
     <nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-12">
+       <!-- Logo + Tên thương hiệu -->
+    <div class="flex items-center gap-3">
+        <img
+            src="{{ url_for('static', filename='images/LOGO.png') }}"
+            alt="Logo NSTN"
+            class="w-10 h-10 object-contain rounded-full"
+        >
+        <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight">Nông Sản Tây Nguyên</span>
+    </div>
 
-            <a href="homePage.html" class="flex items-center gap-3">
-                <img
-                    src="../static/images/LOGO.png"
-                    alt="Logo NSTN"
-                    class="w-10 h-10 object-contain rounded-full"
-                >
-                <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight">Nông Sản Tây Nguyên</span>
-            </a>
-
-            <div class="hidden md:flex gap-8 items-center">
-                <a href="homePage.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Trang chủ</a>
-                <a href="aboutUS.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Về chúng tôi</a>
-                <a href="product.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Sản phẩm</a>
-                <a href="contact.html" class="font-headline transition-all duration-300 pb-1 text-stone-600 dark:text-stone-400 hover:text-emerald-800 hover:border-b-2 hover:border-emerald-700">Liên hệ</a>
-            </div>
-        </div>
+    <div class="hidden md:flex gap-8 items-center">
+        <a href="{{ url_for('home') }}"
+               class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'home' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Trang chủ</a>
+        <a href="{{ url_for('about') }}"
+               class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'about' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Về chúng tôi</a>
+        <a href="{{ url_for('product') }}"
+               class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'product' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Sản phẩm</a>
+        <a href="{{ url_for('contact') }}"
+               class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'contact' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Liên hệ</a>
+    </div>
 
         <div class="flex items-center gap-6">
             <button onclick="toggleLanguage()" class="text-emerald-800 dark:text-emerald-400 font-bold tracking-tight font-headline hover:opacity-80 transition-all cursor-pointer">
