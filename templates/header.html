@@ -1,50 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Nông sản Tây Nguyên</title>
-</head>
-<body>
-<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
-    <nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-       <!-- Logo + Tên thương hiệu -->
-    <div class="flex items-center gap-3">
-        <img
-            src="{{ url_for('static', filename='images/LOGO.png') }}"
-            alt="Logo NSTN"
-            class="w-10 h-10 object-contain rounded-full"
-        >
-        <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight">Nông Sản Tây Nguyên</span>
-    </div>
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-stone-900 shadow-md dark:shadow-none">
+    <nav class="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex justify-between items-center">
+        <!-- Logo + Tên thương hiệu -->
+        <div class="flex items-center gap-2 md:gap-3">
+            <img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="Logo NSTN"
+                class="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full">
+            <span
+                class="text-base sm:text-lg md:text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight whitespace-nowrap">Nông
+                Sản Tây Nguyên</span>
+        </div>
 
-    <div class="hidden md:flex gap-8 items-center">
-        <a href="{{ url_for('home') }}"
-               class="font-headline transition-all duration-300 pb-1
-               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'home' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Trang chủ</a>
-        <a href="{{ url_for('about') }}"
-               class="font-headline transition-all duration-300 pb-1
-               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'about' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Về chúng tôi</a>
-        <a href="{{ url_for('product') }}"
-               class="font-headline transition-all duration-300 pb-1
-               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'product' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Sản phẩm</a>
-        <a href="{{ url_for('contact') }}"
-               class="font-headline transition-all duration-300 pb-1
-               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'contact' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Liên hệ</a>
-    </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 items-center">
+            <a href="{{ url_for('home') }}"
+                class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'home' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Trang
+                chủ</a>
+            <a href="{{ url_for('about') }}"
+                class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'about' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Về
+                chúng tôi</a>
+            <a href="{{ url_for('product') }}"
+                class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'product' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Sản
+                phẩm</a>
+            <a href="{{ url_for('gallery') }}"
+                class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'gallery' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Thư
+                viện</a>
+            <a href="{{ url_for('news') }}"
+                class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'news' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Tin
+                tức</a>
+            <a href="{{ url_for('contact') }}"
+                class="font-headline transition-all duration-300 pb-1
+               {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'contact' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Liên
+                hệ</a>
+        </div>
 
-        <div class="flex items-center gap-6">
-            <button onclick="toggleLanguage()" class="text-emerald-800 dark:text-emerald-400 font-bold tracking-tight font-headline hover:opacity-80 transition-all cursor-pointer">
+        <div class="flex items-center gap-3 md:gap-6">
+            <!-- Nút ngôn ngữ: ẩn trên màn hình quá nhỏ, giữ trên tablet/desktop -->
+            <button onclick="toggleLanguage()"
+                class="hidden sm:block text-sm md:text-base text-emerald-800 dark:text-emerald-400 font-bold tracking-tight font-headline hover:opacity-80 transition-all cursor-pointer">
                 VN / CN
             </button>
 
-            <a href="contact.html" class="font-headline transition-all duration-300 px-6 py-3 rounded-xl inline-block text-center bg-emerald-500 text-white hover:bg-emerald-600 hover:scale-105 shadow-md">
-               NHẬN TƯ VẤN
+            <a href="{{ url_for('contact') }}"
+                class="font-headline transition-all duration-300 px-3 py-2 md:px-6 md:py-3 text-xs md:text-base rounded-lg md:rounded-xl inline-block text-center bg-emerald-500 text-white hover:bg-emerald-600 hover:scale-105 shadow-md whitespace-nowrap">
+                NHẬN TƯ VẤN
             </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden text-emerald-900 dark:text-emerald-50 p-1 hover:bg-stone-100 rounded-md transition-colors"
+                onclick="toggleMobileMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 shadow-xl overflow-hidden transition-all duration-300"
+        style="max-height: 0px; opacity: 0; background-color: white !important;">
+        <div class="flex flex-col px-6 py-4 gap-4">
+            <a href="{{ url_for('home') }}"
+                class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'home' else 'text-stone-600' }}">Trang
+                chủ</a>
+            <a href="{{ url_for('about') }}"
+                class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'about' else 'text-stone-600' }}">Về
+                chúng tôi</a>
+            <a href="{{ url_for('product') }}"
+                class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'product' else 'text-stone-600' }}">Sản
+                phẩm</a>
+            <a href="{{ url_for('gallery') }}"
+                class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'gallery' else 'text-stone-600' }}">Thư
+                viện</a>
+            <a href="{{ url_for('news') }}"
+                class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'news' else 'text-stone-600' }}">Tin
+                tức</a>
+            <a href="{{ url_for('contact') }}"
+                class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'contact' else 'text-stone-600' }}">Liên
+                hệ</a>
+
+            <div class="border-t border-stone-200 mt-2 pt-4 sm:hidden">
+                <button onclick="toggleLanguage()"
+                    class="font-headline text-lg text-emerald-800 font-bold text-left w-full">
+                    Ngôn ngữ: VN / CN
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
 
 <script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            // Hỗ trợ animation cho mượt mà
+            setTimeout(() => {
+                menu.style.maxHeight = '400px';
+                menu.style.opacity = '1';
+            }, 10);
+        } else {
+            menu.style.maxHeight = '0px';
+            menu.style.opacity = '0';
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 300);
+        }
+    }
+
     function toggleLanguage() {
         // Lấy tên file hiện tại trên thanh địa chỉ
         let currentUrl = window.location.pathname;
@@ -63,5 +132,3 @@
         }
     }
 </script>
-</body>
-</html>

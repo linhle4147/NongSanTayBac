@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Tin Tức - Nông Sản Tây Nguyên</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Thêm CSS của Swiper để làm Slider (Carousel) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e1e3e2",
+            "primary-fixed-dim": "#add0ab",
+            "inverse-on-surface": "#eff1f0",
+            "secondary-fixed-dim": "#e8c25d",
+            "secondary-container": "#fdd66e",
+            "error-container": "#ffdad6",
+            "on-surface": "#191c1c",
+            "outline": "#737970",
+            "primary": "#476648",
+            "on-background": "#191c1c",
+            "tertiary-fixed-dim": "#b7ccb5",
+            "on-secondary-fixed-variant": "#584400",
+            "on-secondary-container": "#765c00",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#394b39",
+            "on-secondary-fixed": "#241a00",
+            "inverse-primary": "#add0ab",
+            "on-tertiary-fixed": "#0e1f10",
+            "background": "#f8faf9",
+            "surface-container-low": "#f2f4f3",
+            "on-secondary": "#ffffff",
+            "tertiary": "#506350",
+            "tertiary-container": "#99ae97",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e6e9e8",
+            "surface-tint": "#476648",
+            "on-primary-container": "#264429",
+            "on-surface-variant": "#424841",
+            "on-primary-fixed-variant": "#2f4e32",
+            "surface": "#f8faf9",
+            "primary-container": "#8fb18e",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#304230",
+            "surface-variant": "#e1e3e2",
+            "tertiary-fixed": "#d3e8d0",
+            "secondary-fixed": "#ffdf90",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eceeed",
+            "inverse-surface": "#2e3131",
+            "surface-bright": "#f8faf9",
+            "secondary": "#755b00",
+            "outline-variant": "#c2c8be",
+            "primary-fixed": "#c8ecc6",
+            "surface-dim": "#d8dad9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#032109"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    section,
+    .bg-surface,
+    .bg-stone-50,
+    .bg-surface-container-low {
+      background-color: transparent !important;
+    }
+
+    main {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Style cho pagination của Swiper */
+    .swiper-pagination-bullet {
+      background: white !important;
+      opacity: 0.5;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: #secondary !important; /* Mặc dù class bg-secondary tailwind ko dùng trực tiếp được trong css ở đây, ta có thể dùng màu #755b00 hoặc white cho nổi */
+      transform: scale(1.2);
+    }
+    
+    .news-slide-content {
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    }
+  </style>
+</head>
+
+<body class="font-body text-on-surface">
+  <!-- Background Image Tương Tự HomePage -->
+  <div class="fixed inset-0 -z-10 h-full w-full bg-cover bg-fixed bg-center bg-no-repeat"
+    style="background-image: url('{{ url_for('static', filename='images/bag.jpg') }}');">
+    <div class="absolute inset-0 bg-white/40"></div>
+  </div>
+
+  <!-- Header Menu -->
+  {% include "header.html" %}
+
+  <main class="pt-24 pb-20 overflow-x-hidden min-h-screen">
+    
+    <!-- Tiêu đề Trang -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 pt-8 pb-6">
+      <h1 class="text-4xl md:text-5xl font-black font-headline text-primary">Tin Tức & Sự Kiện</h1>
+      <p class="text-on-surface-variant mt-3 md:text-lg">Cập nhật những thông tin mới nhất về thị trường và hoạt động nổi bật từ Nông Sản Tây Nguyên.</p>
+    </div>
+
+    <!-- Featured News Slider (Slide Chạy Đầu Trang) -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 mb-16">
+      <div class="swiper featuredNewsSwiper w-full h-[350px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl relative">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide relative">
+            <img src="../static/images/HH.jpg" alt="Slide 1" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="news-slide-content absolute inset-0 flex flex-col justify-end p-6 md:p-12">
+              <span class="bg-secondary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-sm w-max mb-3">Nổi Bật</span>
+              <a href="#" class="block hover:underline">
+                <h2 class="text-2xl md:text-4xl font-headline font-black text-white leading-tight mb-2">Thủ phủ Nông Sản Tây Nguyên xuất khẩu hơn 1.000 Tấn Sầu Riêng chuẩn Global GAP</h2>
+              </a>
+              <p class="text-stone-200 hidden md:block max-w-2xl line-clamp-2">Với kinh nghiệm lâu năm, chuỗi cung ứng khép kín từ canh tác đến đóng gói giúp chúng tôi liên tục ghi dấu ấn tại thị trường quốc tế.</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide relative">
+            <img src="../static/images/THAI 2.png" alt="Slide 2" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="news-slide-content absolute inset-0 flex flex-col justify-end p-6 md:p-12">
+              <span class="bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-sm w-max mb-3">Kiến Thức</span>
+              <a href="#" class="block hover:underline">
+                <h2 class="text-2xl md:text-4xl font-headline font-black text-white leading-tight mb-2">Bí Quyết Chọn Sầu Riêng Monthong Đạt Chuẩn Tiêu Dùng Phân Khúc Cao Cấp</h2>
+              </a>
+              <p class="text-stone-200 hidden md:block max-w-2xl line-clamp-2">Sầu riêng Monthong có màu vàng nhạt đẹp mắt, hương vị thơm ngon. Xem ngay các chuyên gia chỉ cách nhận biết trái ngon nhất.</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide relative">
+            <img src="../static/images/RI6 1.png" alt="Slide 3" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="news-slide-content absolute inset-0 flex flex-col justify-end p-6 md:p-12">
+              <span class="bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-sm w-max mb-3">Sự Kiện</span>
+              <a href="#" class="block hover:underline">
+                <h2 class="text-2xl md:text-4xl font-headline font-black text-white leading-tight mb-2">Ra Mắt Quy Trình Đóng Gói Sầu Riêng Ri6 Theo Công Nghệ Mới</h2>
+              </a>
+              <p class="text-stone-200 hidden md:block max-w-2xl line-clamp-2">Nhà máy đóng gói hiện đại vừa được đưa vào vận hành thử nghiệm, hứa hẹn mở ra nhiều tiềm năng trong quy trình bảo quản lạnh.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="swiper-pagination mb-2"></div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next !text-white opacity-70 hover:opacity-100 transition-opacity"></div>
+        <div class="swiper-button-prev !text-white opacity-70 hover:opacity-100 transition-opacity"></div>
+      </div>
+    </section>
+
+    <!-- Tin Tức Khác (Grid Layout) -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="flex justify-between items-center mb-8 border-b border-primary/20 pb-4">
+        <h2 class="text-3xl font-black font-headline text-primary">Tin Mới Nhất</h2>
+        <a href="#" class="text-secondary font-bold flex items-center gap-1 hover:underline">Xem Tất Cả <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Article 1 -->
+        <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="h-52 overflow-hidden relative">
+            <img src="../static/images/THAI 2.png" alt="News Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-primary">Thị Trường</div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="text-xs text-stone-500 mb-2 flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">calendar_today</span> 22/04/2026
+            </div>
+            <h3 class="font-headline font-bold text-xl text-emerald-900 mb-3 group-hover:text-primary transition-colors flex-grow">
+              <a href="#">Xu hướng nhập khẩu sầu riêng tươi của thị trường Châu Á dịp Lễ Tôn Giáo</a>
+            </h3>
+            <p class="text-sm text-on-surface-variant line-clamp-3 mb-4">
+              Dự báo nhu cầu đối với trái sầu riêng chất lượng cao tăng vọt trong dịp lễ lớn. Doanh nghiệp xuất khẩu khẩn trương chuẩn bị những lô hàng cuối...
+            </p>
+            <a href="#" class="inline-flex flex-row items-center font-bold text-sm text-secondary hover:text-primary transition-colors mt-auto w-fit">
+              Đọc tiếp <span class="material-symbols-outlined text-base ml-1">trending_flat</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="h-52 overflow-hidden relative">
+            <img src="../static/images/RI6 1.png" alt="News Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-primary">Cẩm Nang</div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="text-xs text-stone-500 mb-2 flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">calendar_today</span> 15/04/2026
+            </div>
+            <h3 class="font-headline font-bold text-xl text-emerald-900 mb-3 group-hover:text-primary transition-colors flex-grow">
+              <a href="#">Bảo quản Sầu Riêng Ri6: Nhiệt độ nào tốt nhất cho các container xuất khẩu?</a>
+            </h3>
+            <p class="text-sm text-on-surface-variant line-clamp-3 mb-4">
+              Để sầu riêng giữ được độ tươi và màu sắc chuẩn khi sang đến các bến cảng xa, khâu nhiệt độ bảo quản lạnh đóng vai trò cốt lõi. Hãy cùng tìm hiểu.
+            </p>
+            <a href="#" class="inline-flex flex-row items-center font-bold text-sm text-secondary hover:text-primary transition-colors mt-auto w-fit">
+              Đọc tiếp <span class="material-symbols-outlined text-base ml-1">trending_flat</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="h-52 overflow-hidden relative">
+            <img src="../static/images/HH.jpg" alt="News Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-primary">Cộng Đồng</div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="text-xs text-stone-500 mb-2 flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">calendar_today</span> 10/04/2026
+            </div>
+            <h3 class="font-headline font-bold text-xl text-emerald-900 mb-3 group-hover:text-primary transition-colors flex-grow">
+              <a href="#">Đồng hành cùng bà con nông dân Đắk Lắk trong chương trình phủ xanh đất đồi</a>
+            </h3>
+            <p class="text-sm text-on-surface-variant line-clamp-3 mb-4">
+              Nông Sản Tây Nguyên tiếp tục cam kết không chỉ thu mua mà còn hỗ trợ kĩ thuật, thúc đẩy canh tác nông nghiệp xanh và bền vững cùng bà con nông dân vùng Tây Nguyên.
+            </p>
+            <a href="#" class="inline-flex flex-row items-center font-bold text-sm text-secondary hover:text-primary transition-colors mt-auto w-fit">
+              Đọc tiếp <span class="material-symbols-outlined text-base ml-1">trending_flat</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+      
+      <!-- Phân Trang (Nút Xem Thêm) -->
+      <div class="mt-12 flex justify-center">
+        <button class="bg-white/80 hover:bg-primary hover:text-white border border-primary/20 text-primary font-bold px-8 py-3 rounded-xl transition-all shadow-sm">
+          Tải thêm tin tức
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer Menu -->
+  {% include "footer.html" %}
+
+  <!-- Thêm JS của Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Script khởi tạo Carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.featuredNewsSwiper', {
+        // Cấu hình loop và tự động chạy
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        effect: 'fade', // Thêm hiệu ứng fade cho nó đẹp
+        fadeEffect: {
+          crossFade: true
+        },
+        // Thanh chọn bài
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        // Nút bấm tiến/lùi
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
+</body>
+
+</html>

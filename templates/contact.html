@@ -315,67 +315,7 @@
   </section>
   <!-- Footer -->
 
-  <footer
-    class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-[#f8faf9] dark:bg-zinc-900 font-['Inter'] text-sm leading-relaxed">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-screen-2xl mx-auto">
-      <div class="md:col-span-1">
-        <span class="text-xl font-bold text-[#476648] mb-4 block">NÔNG SẢN TÂY NGUYÊN</span>
-        <p class="text-zinc-500 dark:text-zinc-500 mb-8">Nâng tầm giá trị nông sản Việt thông qua quy trình canh tác và
-          chế biến bền vững theo tiêu chuẩn quốc tế.</p>
-        <div class="flex gap-4">
-          <span
-            class="material-symbols-outlined text-zinc-400 hover:text-primary cursor-pointer transition-colors">public</span>
-          <span
-            class="material-symbols-outlined text-zinc-400 hover:text-primary cursor-pointer transition-colors">description</span>
-          <span
-            class="material-symbols-outlined text-zinc-400 hover:text-primary cursor-pointer transition-colors">share</span>
-        </div>
-      </div>
-      <div class="space-y-4">
-        <h4 class="font-bold text-[#476648] uppercase tracking-wider text-xs">Liên kết nhanh</h4>
-        <ul class="space-y-3">
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Sản phẩm chính</a></li>
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Quy trình xuất khẩu</a></li>
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Về chúng tôi</a></li>
-        </ul>
-      </div>
-      <div class="space-y-4">
-        <h4 class="font-bold text-[#476648] uppercase tracking-wider text-xs">Hỗ trợ đối tác</h4>
-        <ul class="space-y-3">
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Chính sách bảo mật</a></li>
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Điều khoản dịch vụ</a></li>
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Giấy phép xuất khẩu</a></li>
-          <li><a class="text-zinc-500 dark:text-zinc-500 hover:text-[#755b00] hover:underline transition-all"
-              href="#">Hồ sơ năng lực</a></li>
-        </ul>
-      </div>
-      <div class="space-y-4">
-        <h4 class="font-bold text-[#476648] uppercase tracking-wider text-xs">Newsletter</h4>
-        <p class="text-zinc-500 dark:text-zinc-500 mb-4">Nhận thông tin cập nhật về mùa vụ và thị trường sớm nhất.</p>
-        <div class="flex">
-          <input
-            class="bg-surface-container-high border-none rounded-l-lg py-2 px-4 w-full focus:ring-1 focus:ring-primary"
-            placeholder="SĐT của bạn" type="text" />
-          <button class="bg-primary text-white px-4 rounded-r-lg hover:opacity-90">Gửi</button>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-screen-2xl mx-auto px-12 py-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-400">
-      <div>Copyright 2026 © CÔNG TY TNHH TM&DV NÔNG SẢN TÂY NGUYÊN. MST: 6001769504</div>
-      <div class="flex gap-8">
-        <a class="hover:text-primary transition-colors" href="#">Facebook</a>
-        <a class="hover:text-primary transition-colors" href="#">Tiktok</a>
-        <a class="hover:text-primary transition-colors" href="#">Youtube</a>
-      </div>
-    </div>
-  </footer>
+  {% include "footer.html" %}
   <script>
     const locations = {
       daklak: {

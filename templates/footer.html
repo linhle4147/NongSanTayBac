@@ -1,0 +1,235 @@
+<!-- Animated Tractor -->
+  <div class="relative w-full overflow-hidden" style="height: 100px; background: transparent;">
+
+    <!-- Vehicle Container -->
+    <div id="tractor-vehicle" class="absolute flex flex-col items-center" style="left: -160px; bottom: 0;">
+
+      <!-- Speech Bubble -->
+      <div id="speech-bubble"
+        class="mb-1 bg-white border-2 border-green-500 rounded-xl px-3 py-2 text-xs font-bold text-green-700 whitespace-nowrap shadow-md relative"
+        style="opacity: 0; transition: opacity 0.4s ease;">
+        Nông Sản Tây Nguyên xin chào 🌿!
+        <div
+          class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r-2 border-b-2 border-green-500 rotate-45">
+        </div>
+      </div>
+
+      <!-- SVG Xe Công Nông + Người Chibi + Sầu Riêng -->
+      <svg width="105" height="56" viewBox="0 0 140 75" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ===== SẦU RIÊNG TRÊN THÙNG XE ===== -->
+        <!-- Thân sầu riêng -->
+        <ellipse cx="28" cy="34" rx="14" ry="12" fill="#7C6B1E" />
+        <!-- Gai sầu riêng -->
+        <polygon points="28,18 25,26 31,26" fill="#5C4F10" />
+        <polygon points="18,22 20,30 26,27" fill="#5C4F10" />
+        <polygon points="38,22 36,30 30,27" fill="#5C4F10" />
+        <polygon points="14,30 18,36 22,32" fill="#5C4F10" />
+        <polygon points="42,30 38,36 34,32" fill="#5C4F10" />
+        <polygon points="16,40 21,44 22,38" fill="#5C4F10" />
+        <polygon points="40,40 35,44 34,38" fill="#5C4F10" />
+        <polygon points="28,46 25,38 31,38" fill="#5C4F10" />
+        <!-- Vân sầu riêng -->
+        <path d="M20 28 Q28 22 36 28" stroke="#5C4F10" stroke-width="0.8" fill="none" />
+        <path d="M17 35 Q28 28 39 35" stroke="#5C4F10" stroke-width="0.8" fill="none" />
+        <path d="M19 42 Q28 36 37 42" stroke="#5C4F10" stroke-width="0.8" fill="none" />
+        <!-- Cuống sầu riêng -->
+        <line x1="28" y1="18" x2="28" y2="14" stroke="#5C4F10" stroke-width="2" stroke-linecap="round" />
+
+        <!-- ===== NGƯỜI CHIBI ===== -->
+        <!-- Thân áo -->
+        <rect x="58" y="28" width="18" height="16" rx="3" fill="#3B82F6" />
+        <!-- Đầu -->
+        <circle cx="67" cy="22" r="9" fill="#FBBF24" />
+        <!-- Mắt -->
+        <circle cx="63" cy="21" r="1.5" fill="#1E293B" />
+        <circle cx="71" cy="21" r="1.5" fill="#1E293B" />
+        <!-- Miệng -->
+        <path d="M63 25 Q67 28 71 25" stroke="#1E293B" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <!-- Nón lá -->
+        <ellipse cx="67" cy="14" rx="13" ry="4" fill="#D97706" />
+        <ellipse cx="67" cy="13" rx="7" ry="3" fill="#F59E0B" />
+        <!-- Tay vẫy -->
+        <line x1="58" y1="32" x2="50" y2="24" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" />
+        <circle cx="49" cy="23" r="3" fill="#FBBF24" />
+        <!-- Tay phải -->
+        <line x1="76" y1="32" x2="82" y2="36" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" />
+        <!-- Chân -->
+        <rect x="60" y="43" width="5" height="8" rx="2" fill="#1D4ED8" />
+        <rect x="69" y="43" width="5" height="8" rx="2" fill="#1D4ED8" />
+
+        <!-- ===== XE CÔNG NÔNG ===== -->
+        <!-- Thùng xe -->
+        <rect x="5" y="38" width="50" height="18" rx="3" fill="#92400E" />
+        <rect x="7" y="40" width="46" height="14" rx="2" fill="#B45309" />
+        <!-- Thành thùng xe -->
+        <line x1="20" y1="38" x2="20" y2="56" stroke="#92400E" stroke-width="1.5" />
+        <line x1="35" y1="38" x2="35" y2="56" stroke="#92400E" stroke-width="1.5" />
+        <!-- Cabin -->
+        <rect x="52" y="30" width="45" height="26" rx="4" fill="#D97706" />
+        <!-- Kính -->
+        <rect x="82" y="33" width="12" height="14" rx="2" fill="#BAE6FD" opacity="0.8" />
+        <!-- Đèn -->
+        <circle cx="100" cy="42" r="4" fill="#FEF08A" />
+        <circle cx="100" cy="42" r="2.5" fill="#FDE047" />
+        <!-- Ống khói -->
+        <rect x="88" y="20" width="5" height="12" rx="2" fill="#374151" />
+        <!-- Khói -->
+        <circle cx="90" cy="17" r="3" fill="#9CA3AF" opacity="0.6" />
+        <circle cx="93" cy="13" r="2.5" fill="#9CA3AF" opacity="0.4" />
+        <circle cx="88" cy="10" r="2" fill="#9CA3AF" opacity="0.3" />
+        <!-- Bánh xe sau -->
+        <circle cx="25" cy="62" r="13" fill="#1E293B" />
+        <circle cx="25" cy="62" r="9" fill="#374151" />
+        <circle cx="25" cy="62" r="4" fill="#6B7280" />
+        <line x1="25" y1="53" x2="25" y2="71" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="16" y1="62" x2="34" y2="62" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="19" y1="55" x2="31" y2="69" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="31" y1="55" x2="19" y2="69" stroke="#4B5563" stroke-width="1.5" />
+        <!-- Bánh xe trước -->
+        <circle cx="90" cy="64" r="10" fill="#1E293B" />
+        <circle cx="90" cy="64" r="7" fill="#374151" />
+        <circle cx="90" cy="64" r="3" fill="#6B7280" />
+        <line x1="90" y1="57" x2="90" y2="71" stroke="#4B5563" stroke-width="1.5" />
+        <line x1="83" y1="64" x2="97" y2="64" stroke="#4B5563" stroke-width="1.5" />
+        <!-- Vô lăng -->
+        <circle cx="83" cy="38" r="5" fill="none" stroke="#92400E" stroke-width="2" />
+        <line x1="83" y1="33" x2="83" y2="43" stroke="#92400E" stroke-width="1.5" />
+        <line x1="78" y1="38" x2="88" y2="38" stroke="#92400E" stroke-width="1.5" />
+        <!-- Ghế -->
+        <rect x="55" y="35" width="12" height="6" rx="2" fill="#B45309" />
+      </svg>
+    </div>
+  </div>
+
+  <style>
+    #tractor-vehicle {
+      animation: driveAcross 25s linear infinite;
+      opacity: 0.65;
+    }
+
+    @keyframes driveAcross {
+      0% {
+        left: -160px;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Hiệu ứng nhún xe */
+    #tractor-svg {
+      animation: bounce 0.5s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-4px);
+      }
+    }
+
+    /* Hiệu ứng khói xì theo nhịp nhún */
+    #smoke circle {
+      animation: smokeOut 0.5s ease-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes smokeOut {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(0);
+      }
+
+      50% {
+        opacity: 0.7;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-10px);
+      }
+    }
+  </style>
+
+  <script>
+    const bubble = document.getElementById('speech-bubble');
+
+    function showBubble() {
+      if (bubble) {
+        bubble.style.opacity = '1';
+        setTimeout(() => {
+          bubble.style.opacity = '0';
+        }, 3000);
+      }
+    }
+
+    // Hiện lần đầu sau 1s, sau đó mỗi 10s
+    setTimeout(() => {
+      showBubble();
+      setInterval(showBubble, 10000);
+    }, 1000);
+  </script>
+  <footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-1">
+        <h3 class="font-manrope font-bold text-emerald-900 text-xl mb-6">Nông Sản Tây Nguyên</h3>
+        <p class="text-stone-500 text-sm leading-relaxed mb-6">Nâng tầm giá trị nông sản Việt thông qua quy trình canh
+          tác và chế biến bền vững theo tiêu chuẩn quốc tế</p>
+        <div class="flex gap-4">
+          <span
+            class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
+          <span
+            class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">language</span>
+          <span
+            class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6 text-emerald-900">Liên kết nhanh</h4>
+        <ul class="space-y-4">
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="aboutUS.html">Về chúng tôi</a></li>
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="product.html">Dòng sản phẩm</a></li>
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="#">Quy trình sản xuất</a></li>
+          <li><a
+              class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-4 decoration-transparent hover:decoration-emerald-700"
+              href="#">Tin tức thị trường</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6 text-emerald-900">Hỗ trợ B2B</h4>
+        <ul class="space-y-4">
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Legal Information</a></li>
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Privacy Policy</a></li>
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Contact Details</a></li>
+          <li><a class="text-stone-500 hover:text-emerald-700 transition-colors" href="#">Quản lý đối tác</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6 text-emerald-900">Văn phòng</h4>
+        <p class="text-stone-500 text-sm leading-relaxed mb-4">
+          <span class="font-bold">Trụ sở:</span> Xã Krông Pắc, Tỉnh Đắk Lắk, Việt Nam.
+        </p>
+        <p class="text-stone-500 text-sm leading-relaxed">
+          <span class="font-bold">Hotline:</span> +84 0932 444 222<br />
+          <span class="font-bold">Email:</span> congtytnhhtmdvnongsantaynguyen@gmail.com
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-8 border-t border-stone-200">
+      <p class="text-stone-500 text-xs text-center font-inter mt-4 md:mt-0">
+        Copyright 2026 © CÔNG TY TNHH TM&DV NÔNG SẢN TÂY NGUYÊN. MST: 6001769504.
+      </p>
+    </div>
+  </footer>
