@@ -1,9 +1,9 @@
-<header class="fixed top-0 w-full z-50 bg-white dark:bg-stone-900 shadow-md dark:shadow-none">
-    <nav class="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex justify-between items-center">
+<header class="fixed top-0 w-full z-50 md:pt-2 md:px-4 pointer-events-none">
+    <nav class="max-w-7xl mx-auto px-4 md:px-8 py-2 md:py-3 flex justify-between items-center bg-[#f8faf9]/85 hover:bg-[#f8faf9]/100 dark:bg-stone-900/85 dark:hover:bg-stone-900/100 backdrop-blur-md shadow-lg hover:shadow-2xl md:rounded-2xl border border-white/40 hover:border-emerald-300 pointer-events-auto transition-all duration-500">
         <!-- Logo + Tên thương hiệu -->
-        <div class="flex items-center gap-2 md:gap-3">
+        <div class="flex items-center gap-2 md:gap-3 group cursor-pointer">
             <img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="Logo NSTN"
-                class="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full">
+                class="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
             <span
                 class="text-base sm:text-lg md:text-2xl font-black text-emerald-900 dark:text-emerald-50 font-headline tracking-tight whitespace-nowrap">Nông
                 Sản Tây Nguyên</span>
@@ -12,27 +12,27 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex gap-8 items-center">
             <a href="{{ url_for('home') }}"
-                class="font-headline transition-all duration-300 pb-1
+                class="font-headline transition-all duration-300 pb-1 hover:-translate-y-0.5 inline-block
                {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'home' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Trang
                 chủ</a>
             <a href="{{ url_for('about') }}"
-                class="font-headline transition-all duration-300 pb-1
+                class="font-headline transition-all duration-300 pb-1 hover:-translate-y-0.5 inline-block
                {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'about' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Về
                 chúng tôi</a>
             <a href="{{ url_for('product') }}"
-                class="font-headline transition-all duration-300 pb-1
+                class="font-headline transition-all duration-300 pb-1 hover:-translate-y-0.5 inline-block
                {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'product' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Sản
                 phẩm</a>
             <a href="{{ url_for('gallery') }}"
-                class="font-headline transition-all duration-300 pb-1
+                class="font-headline transition-all duration-300 pb-1 hover:-translate-y-0.5 inline-block
                {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'gallery' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Thư
                 viện</a>
             <a href="{{ url_for('news') }}"
-                class="font-headline transition-all duration-300 pb-1
+                class="font-headline transition-all duration-300 pb-1 hover:-translate-y-0.5 inline-block
                {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'news' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Tin
                 tức</a>
             <a href="{{ url_for('contact') }}"
-                class="font-headline transition-all duration-300 pb-1
+                class="font-headline transition-all duration-300 pb-1 hover:-translate-y-0.5 inline-block
                {{ 'text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700' if request.endpoint == 'contact' else 'text-stone-600 dark:text-stone-400 hover:text-emerald-800' }}">Liên
                 hệ</a>
         </div>
@@ -63,8 +63,8 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu"
-        class="hidden md:hidden absolute top-full left-0 w-full dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 shadow-xl overflow-hidden transition-all duration-300"
-        style="max-height: 0px; opacity: 0; background-color: white !important;">
+        class="hidden md:hidden absolute left-0 w-full bg-[#f8faf9]/95 dark:bg-stone-900/95 backdrop-blur-md border-t border-stone-200 dark:border-stone-800 shadow-xl overflow-hidden transition-all duration-300 pointer-events-auto"
+        style="max-height: 0px; opacity: 0; top: 100%;">
         <div class="flex flex-col px-6 py-4 gap-4">
             <a href="{{ url_for('home') }}"
                 class="font-headline text-lg {{ 'font-bold text-emerald-700' if request.endpoint == 'home' else 'text-stone-600' }}">Trang

@@ -23,5 +23,9 @@ def gallery():
 def news():
     return render_template('news.html')
 
+@app.route('/news_detail')
+def news_detail():
+    return render_template('news_detail.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

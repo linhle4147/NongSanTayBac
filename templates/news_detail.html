@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Chi Tiết Bài Viết - Nông Sản Tây Nguyên</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e1e3e2",
+            "primary-fixed-dim": "#add0ab",
+            "inverse-on-surface": "#eff1f0",
+            "secondary-fixed-dim": "#e8c25d",
+            "secondary-container": "#fdd66e",
+            "error-container": "#ffdad6",
+            "on-surface": "#191c1c",
+            "outline": "#737970",
+            "primary": "#476648",
+            "on-background": "#191c1c",
+            "tertiary-fixed-dim": "#b7ccb5",
+            "on-secondary-fixed-variant": "#584400",
+            "on-secondary-container": "#765c00",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#394b39",
+            "on-secondary-fixed": "#241a00",
+            "inverse-primary": "#add0ab",
+            "on-tertiary-fixed": "#0e1f10",
+            "background": "#f8faf9",
+            "surface-container-low": "#f2f4f3",
+            "on-secondary": "#ffffff",
+            "tertiary": "#506350",
+            "tertiary-container": "#99ae97",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e6e9e8",
+            "surface-tint": "#476648",
+            "on-primary-container": "#264429",
+            "on-surface-variant": "#424841",
+            "on-primary-fixed-variant": "#2f4e32",
+            "surface": "#f8faf9",
+            "primary-container": "#8fb18e",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#304230",
+            "surface-variant": "#e1e3e2",
+            "tertiary-fixed": "#d3e8d0",
+            "secondary-fixed": "#ffdf90",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eceeed",
+            "inverse-surface": "#2e3131",
+            "surface-bright": "#f8faf9",
+            "secondary": "#755b00",
+            "outline-variant": "#c2c8be",
+            "primary-fixed": "#c8ecc6",
+            "surface-dim": "#d8dad9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#032109"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    section, .bg-surface, .bg-stone-50, .bg-surface-container-low { background-color: transparent !important; }
+    main { background: rgba(255, 255, 255, 0.6); }
+    .content-body p { margin-bottom: 1.25rem; line-height: 1.8; }
+    .content-body img { border-radius: 0.75rem; margin: 2rem 0; width: 100%; height: auto; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+    .content-body h2 { font-family: 'Manrope', sans-serif; font-size: 1.75rem; font-weight: 800; color: #264429; margin-top: 2.5rem; margin-bottom: 1.25rem; }
+  </style>
+</head>
+<body class="font-body text-on-surface">
+  <div class="fixed inset-0 -z-10 h-full w-full bg-cover bg-fixed bg-center bg-no-repeat" style="background-image: url('{{ url_for('static', filename='images/bag.jpg') }}');">
+    <div class="absolute inset-0 bg-white/40"></div>
+  </div>
+
+  {% include "header.html" %}
+
+  <main class="pt-24 pb-20 overflow-x-hidden min-h-screen">
+    <article class="max-w-4xl mx-auto px-4 md:px-8 pt-8 pb-10 bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/50 mt-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex text-sm text-on-surface-variant mb-8" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a href="{{ url_for('home') }}" class="inline-flex items-center hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-[18px] mr-1">home</span>
+              Trang Chủ
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <span class="material-symbols-outlined text-[18px] mx-1">chevron_right</span>
+              <a href="{{ url_for('news') }}" class="hover:text-primary transition-colors">Tin Tức</a>
+            </div>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <span class="material-symbols-outlined text-[18px] mx-1">chevron_right</span>
+              <span class="text-stone-500 font-medium">Chi Tiết Bài Viết</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-10">
+        <div class="flex flex-wrap items-center gap-3 mb-5">
+          <span class="bg-primary text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-md shadow-sm">Thị Trường</span>
+          <span class="text-sm text-stone-500 flex items-center gap-1.5 bg-white/50 px-3 py-1 rounded-full"><span class="material-symbols-outlined text-[16px]">calendar_today</span> 22/04/2026</span>
+          <span class="text-sm text-stone-500 flex items-center gap-1.5 bg-white/50 px-3 py-1 rounded-full"><span class="material-symbols-outlined text-[16px]">visibility</span> 1,245 Lượt xem</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black font-headline text-emerald-900 leading-tight mb-6">Xu hướng nhập khẩu sầu riêng tươi của thị trường Châu Á dịp Lễ Tôn Giáo</h1>
+        <p class="text-lg md:text-xl text-on-surface-variant font-medium italic mb-8 border-l-4 border-secondary pl-4">Dự báo nhu cầu đối với trái sầu riêng chất lượng cao tăng vọt trong dịp lễ lớn. Doanh nghiệp xuất khẩu khẩn trương chuẩn bị những lô hàng cuối...</p>
+        
+        <!-- Featured Image -->
+        <div class="w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden mb-10 shadow-2xl relative group">
+           <img src="{{ url_for('static', filename='images/THAI 2.png') }}" alt="Featured Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <div class="content-body text-on-surface-variant text-base md:text-lg leading-relaxed">
+        <p>Thị trường Châu Á luôn là điểm đến hấp dẫn đối với nông sản Việt Nam, đặc biệt là trái cây tươi nhiệt đới. Trong những tháng gần đây, khi các dịp lễ tôn giáo lớn đang đến gần, nhu cầu tiêu thụ sầu riêng tại các quốc gia như Trung Quốc, Thái Lan và Malaysia đã ghi nhận mức tăng trưởng đột biến.</p>
+        
+        <h2>Cơ hội lớn cho nông sản Việt</h2>
+        <p>Sầu riêng được mệnh danh là "vua của các loại trái cây" và thường xuyên xuất hiện trong các mâm cúng, tiệc mừng lễ hội nhờ hương vị đặc trưng và giá trị dinh dưỡng cao. Theo số liệu từ Hiệp hội Rau quả Việt Nam, xuất khẩu sầu riêng sang thị trường tỷ dân trong tháng này dự kiến tăng 40% so với cùng kỳ năm ngoái.</p>
+        
+        <figure class="relative my-10">
+          <img src="{{ url_for('static', filename='images/RI6 1.png') }}" alt="Content Image" class="rounded-2xl shadow-xl w-full" />
+          <figcaption class="text-center text-sm text-stone-500 mt-4 italic">Sầu riêng Ri6 luôn được ưa chuộng tại thị trường nước ngoài nhờ chất lượng vượt trội.</figcaption>
+        </figure>
+        
+        <h2>Thách thức về chất lượng và logistics</h2>
+        <p>Tuy nhiên, cơ hội lớn luôn đi kèm với thách thức. Các quốc gia nhập khẩu đang áp dụng những tiêu chuẩn ngày càng khắt khe về chất lượng, an toàn thực phẩm và truy xuất nguồn gốc. Việc đảm bảo sầu riêng giữ được độ tươi ngon trong quá trình vận chuyển dài ngày cũng là bài toán nan giải đối với các doanh nghiệp logistics.</p>
+        <p>Đại diện Nông Sản Tây Nguyên cho biết: "Chúng tôi đã chủ động áp dụng quy trình kiểm soát chất lượng nghiêm ngặt từ khâu thu hoạch đến đóng gói. Đồng thời, công ty cũng đang thử nghiệm các giải pháp bảo quản lạnh tiên tiến nhất để đảm bảo sầu riêng đến tay người tiêu dùng quốc tế với chất lượng hoàn hảo nhất."</p>
+      </div>
+
+      <!-- Article Footer (Tags & Share) -->
+      <footer class="mt-12 pt-8 border-t border-primary/20 flex flex-col md:flex-row justify-between items-center gap-6 bg-white/50 p-6 rounded-2xl">
+        <div class="flex items-center gap-2 flex-wrap justify-center">
+          <span class="font-bold text-sm text-primary uppercase tracking-wider mr-2">Tags:</span>
+          <a href="#" class="bg-white border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">Sầu Riêng</a>
+          <a href="#" class="bg-white border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">Xuất Khẩu</a>
+          <a href="#" class="bg-white border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">Thị Trường</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="font-bold text-sm text-primary uppercase tracking-wider mr-2">Chia sẻ:</span>
+          <button class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md" aria-label="Share on Facebook"><span class="material-symbols-outlined text-[20px]">share</span></button>
+          <button class="w-10 h-10 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md" aria-label="Share on Twitter"><span class="material-symbols-outlined text-[20px]">chat</span></button>
+          <button class="w-10 h-10 rounded-full bg-stone-700 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md" aria-label="Copy Link"><span class="material-symbols-outlined text-[20px]">link</span></button>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  {% include "footer.html" %}
+
+</body>
+</html>
