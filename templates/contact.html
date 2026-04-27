@@ -190,50 +190,59 @@
       <h2 class="text-3xl font-bold text-on-surface mb-4 tracking-tight">Gửi yêu cầu</h2>
       <p class="text-on-surface-variant mb-12 font-body">Điền thông tin bên dưới, chuyên viên của chúng tôi sẽ phản hồi
         trong vòng 24h làm việc.</p>
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
+      <!-- Flash Messages -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="mb-8 p-4 rounded-lg shadow-sm border font-medium {% if category == 'success' %}bg-primary-container text-on-primary-container border-primary{% else %}bg-error-container text-on-error-container border-error{% endif %}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form action="{{ url_for('send_contact') }}" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
         <div class="space-y-2">
           <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Họ và tên</label>
-          <input
+          <input name="fullname" required
             class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm"
             placeholder="Nguyễn Văn A" type="text" />
         </div>
         <div class="space-y-2">
-          <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Email công
-            việc</label>
-          <input
+          <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Email công việc</label>
+          <input name="email" required
             class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm"
             placeholder="name@company.com" type="email" />
         </div>
         <div class="space-y-2">
           <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Số điện thoại</label>
-          <input
+          <input name="phone" required
             class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm"
             placeholder="+84 ..." type="tel" />
         </div>
         <div class="md:col-span-2 space-y-2">
-          <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Lĩnh vực quan
-            tâm</label>
+          <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Lĩnh vực quan tâm</label>
           <div class="flex flex-wrap gap-3 pt-2">
             <label class="relative flex items-center group cursor-pointer">
-              <input class="sr-only peer" name="interest" type="radio" />
+              <input class="sr-only peer" name="interest" type="radio" value="Báo giá sầu riêng" />
               <div
                 class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm hover:shadow-md">
                 Báo giá sầu riêng</div>
             </label>
             <label class="relative flex items-center group cursor-pointer">
-              <input class="sr-only peer" name="interest" type="radio" />
+              <input class="sr-only peer" name="interest" type="radio" value="Tư vấn mã số vùng trồng" />
               <div
                 class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm hover:shadow-md">
                 Tư vấn mã số vùng trồng</div>
             </label>
             <label class="relative flex items-center group cursor-pointer">
-              <input class="sr-only peer" name="interest" type="radio" />
+              <input class="sr-only peer" name="interest" type="radio" value="Tuyển dụng" />
               <div
                 class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm hover:shadow-md">
                 Tuyển dụng</div>
             </label>
             <label class="relative flex items-center group cursor-pointer">
-              <input class="sr-only peer" name="interest" type="radio" />
+              <input class="sr-only peer" name="interest" type="radio" value="Khác" checked />
               <div
                 class="px-6 py-2.5 bg-surface-container-low text-sm font-medium peer-checked:bg-primary-container peer-checked:text-on-primary-container rounded-full border border-transparent peer-checked:border-primary transition-all shadow-sm hover:shadow-md">
                 Khác</div>
@@ -241,9 +250,8 @@
           </div>
         </div>
         <div class="md:col-span-2 space-y-2">
-          <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Nội dung tin
-            nhắn</label>
-          <textarea
+          <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Nội dung tin nhắn</label>
+          <textarea name="message" required
             class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary py-4 px-4 rounded-lg transition-all shadow-sm"
             placeholder="Chúng tôi có thể giúp gì cho bạn?" rows="4"></textarea>
         </div>
