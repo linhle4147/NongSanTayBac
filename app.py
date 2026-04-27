@@ -8,10 +8,10 @@ app = Flask(__name__)
 app.secret_key = 'nong_san_tay_nguyen_secret_key' # Cần thiết để dùng flash messages
 
 # Cấu hình Email (Bạn cần thay thế MẬT KHẨU ỨNG DỤNG của mình vào đây)
-EMAIL_SENDER = 'lebachlinh0347@gmail.com'
+EMAIL_SENDER = 'nstn4w@gmail.com'
 # https://myaccount.google.com/apppasswords
 EMAIL_PASSWORD = 'uuxtflkqbktpmkzz' 
-EMAIL_RECEIVER = 'lebachlinh0347@gmail.com'
+EMAIL_RECEIVER = 'nstn4w@gmail.com'
 
 @app.route('/')
 def home():
